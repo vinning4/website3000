@@ -1,0 +1,429 @@
+/*-- -------------------------- -->
+<--- Did you know 1 - Services CS 1628 intro without 4 cards -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-1628, #services-1628-2, #services-1628-3, #services-1628-4 {
+        padding: var(--sectionPadding);
+        background-color: #fff;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (550/16em);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+    
+        .cs-title {
+            max-width: 20ch;
+        }
+
+        .cs-text {
+            font-size: (18/16rem);
+            max-width: (640/16rem);
+            position: relative;
+            z-index: 1;
+            text-align: left;
+
+            &:after {
+                /* divider line */
+                content: "";
+                width: 100%;
+                height: 1px;
+                margin-top: (24/16rem);
+                background: var(--primary);
+                opacity: 1;
+                display: block;
+                position: relative;
+            }
+        }
+    
+    }
+}
+
+@media only screen and (min-width: 0rem) {
+  #services-1628 {
+        /* for DYK-1 gap to header bar*/
+        padding-top: 12rem;
+  }
+}
+
+@media only screen and (min-width: 0rem) {
+  #services-1628-2, #services-1628-4 {     /* For DYK-2 & DYK-4 section */
+        background-color: #f7f7f7;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-1628, #services-1628-2, #services-1628-3, #services-1628-4 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-content {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-flex {
+            text-align: left;
+            width: 40vw;
+            max-width: (640/16rem);
+            flex: none;
+        }
+
+        .cs-title {
+            margin: 0;
+        }
+
+        .cs-text {
+            padding: (12/16rem) 0 (12/16rem) (24/16rem);
+
+            &:after {
+                width: 1px;
+                height: 100%;
+                margin: 0 (24/16rem) 0 0;
+                order: -1;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+       
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #services-1628 {
+        /* Only cs-item was here, V removed */
+    }
+}
+
+
+
+/*-- -------------------------- -->
+<---  Do things differently - Services SBS CS 564 -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-564, #services-564-2 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cs-topper {
+            color: var(--headerColor);
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-color {
+            color: var(--primary);
+        }
+
+        .cs-h3 {
+            /* 25px - 31px */
+            font-size: clamp(1.5625rem, 3vw, 1.9375rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            text-align: inherit;
+            /* 16px - 20px */
+            margin: 0 0 clamp(1rem, 1.9vw, 1.25rem) 0;
+            color: var(--headerColor);
+        }
+
+       /* removed cs-ul, cs-li, cs-icon, cs-button-solid */
+
+        .cs-picture {
+            /* changes at tablet */
+            width: 100%;
+            max-width: (630/16rem);
+            /* changes to a clamp at tablet */
+            height: (396/16rem);
+            display: block;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 0rem) {
+    #services-564-2 {
+      background-color: #f7f7f7;
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-564, #services-564-2 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .cs-picture {
+            width: 46vw;
+            /* 415px - 528px */
+            height: clamp(25.9375rem, 50vw, 33rem);
+        }
+
+        .cs-content {
+            width: 45%;
+            max-width: (520/16rem);
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<--- Title part of Timetable CS 1731 -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #timetable-1731 {
+        padding: var(--sectionPadding);
+        padding-bottom: (24/16rem); /* V: to reduce gap to table body below */
+        position: relative;
+        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to center if content needs to be centrally aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* aligns content to the left, set to center to centrally align */
+            align-items: flex-start;
+        }
+
+        .cs-flex-group {   /* V added */
+            /* Limit the width of text content to create space from button on right */
+            max-width: 65%; /* Adjust this percentage as needed */
+            flex: 0 1 auto; /* Don't grow, allow shrinking */
+        }
+
+        .cs-text {
+            text-align: justify;
+        }
+
+        .cs-topper {
+          color: var(--headerColor);
+        }
+
+        /* removed cs-button-solid */
+       
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #timetable-1731 {
+        .cs-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+    }
+}
+
+/* End of top part of 1st timetable CS 1731 - just cs-topper, title, button to the right  */
+
+
+/*-- -------------------------- -->
+<---     Table body CS 1669        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #table-1669 {
+        padding: var(--sectionPadding);
+        padding-top: (24/16rem); /* V: to reduce gap to table title above */
+        
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+    
+        .cs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .cs-th {
+            padding: (12/16rem) (16/16rem);
+            box-sizing: border-box;
+        }
+
+        .cs-td {
+            padding: (8/16rem) (16/16rem);
+            box-sizing: border-box;
+        }
+      
+        .cs-th, .cs-td {
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+    
+        .cs-color {
+            .cs-th {
+                &:first-child {
+                    color: #fff;
+                    background-color: var(--primary);
+                }
+            }
+        }
+    
+        .cs-th:first-child, .cs-td:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 100; /* Make sure it sits above the other cells */
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+      
+        .cs-th {
+           background-color: #f2f2f2;
+        }
+
+        .cs-tr {
+            color: var(--bodyTextColor);
+        }
+
+    }
+}
+
+/* Tablet - 600px */
+@media screen and (max-width: 37.5rem) {
+    #table-1669 {
+        .cs-table {
+            display: block;
+            overflow-x: auto;
+        }
+    }
+}
+
+/* End of table section CS 1669 */
+
+
+/* Security content inside DYK-4 above - content flair CS 1113 */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #list-1113 {
+        padding: 0;
+        padding-top: 4rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: (24/16rem);
+
+        .cs-li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 3vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0 0 (12/16rem);
+        }
+
+        .cs-li-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            max-width: (930/16rem);
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+                                

@@ -1,108 +1,98 @@
 ---
-title: "About | Code Stitch Web Designs"
-description: "Meta description for the page"
+title: "About Website3000 | Hand-Coded Websites for Melbourne Small Businesses"
+description: "Meet Vin, a Melbourne web designer building fast, hand-coded websites for small businesses. No bloat—just clean code and direct partnership at affordable prices."
 permalink: "/about/"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
     <link rel="stylesheet" href="/assets/css/about.css">
 {% endblock %}
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
+  
+<!-- ============================================ -->
+<!--   About pg - Why Choose Us CS 1821  -->
+<!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">About Us</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/about/" class="cs-link cs-active">About Us</a>
+<section id="why-choose-1821">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-text-box"> <!-- This box exists but not styled for now. -->
+                <span class="cs-topper">Website3000</span>
+                <h2 class="cs-title">Part of Australia's Tech Hub</h2>
             </div>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/melb-desktop2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/melb-desktop2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/melb-desktop2.jpg" alt="melbourne city landscape" width="760" height="760">
+            </picture>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
-    </div>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About CodeStitch</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-item-wrapper">
+                    <h3 class="cs-h3">
+                        About Me
+                    </h3>
+                    <p class="cs-item-text">
+                        Hi, I'm Vin. A former bioengineer and molecular biologist with a background in product design and manufacturing, I bring an engineer's mindset to web development. Formally trained in front-end development, I build websites because I genuinely enjoy coding. I'm most drawn to the puzzle-solving side of web development : writing precise code to turn logic and aesthetic sensibility into an elegant digital product that actually provides value.<br><br>
+                        Working from my home office in Melbourne, I run <i>Website3000</i> with the simple goal of delivering quality work without the notorious agency markup. I've distilled my practice to what genuinely moves the needle for businesses.
+                    </p>
                 </div>
-                <a href="/contact/" class="cs-button-solid">Get in Touch</a>
-            </div>
-        </div>
-    </section>
+            </li>
+            <li class="cs-item">
+                <div class="cs-item-wrapper">
+                    <h3 class="cs-h3">
+                        About Web Design
+                    </h3>
+                    <p class="cs-item-text">
+                         A website is often your first and only impression. Good website design converts curiosity into commerce. Most businesses just need five clean, fast-loading pages, yet face two frustrating options : Cut-rate developers posing as 'WordPress experts' who just commoditize templates, or boutique agencies with inflated invoices and jargon that's more theatrics than actual performance.<br><br>
+                         Both approaches miss the point — your website isn't a vanity project, it's digital real estate working 24/7 to build trust.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-item-wrapper">
+                    <h3 class="cs-h3">
+                        How I Work
+                    </h3>
+                    <p class="cs-item-text">
+                        I focus on what matters : Fast-loading sites that maximize business potential—and look great on any device. I write every line of code in semantic HTML/CSS/JS without using templates or frameworks (Few developers do this anymore). Hard-coding a website like this requires a higher level of coding knowledge but gives complete control over the look and functionality. This code is also scalable, reliable, secure, and optimized for both search engines and AI crawlers. Each site is built with modern best practices (including SEO) to ensure longevity and performance. No page builders, no unnecessary plugins, no databases to hack, no mobile formatting glitches.<br><br>
+                        Since Google prioritizes quality content, I give equal attention to crafting compelling copy tailored to your business. This includes weekly blog posts, available as an optional add-on.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-item-wrapper">
+                    <h3 class="cs-h3">
+                        What You Get
+                    </h3>
+                    <p class="cs-item-text">
+                        Direct partnership with premium-quality results. When you call or email, you reach me—no phone trees, no call centres. The subscription model acknowledges small business economics rather than exploiting it, giving you predictable prices that make sense. I look after updates and SEO so that you can focus on what you do best.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--        CTA - banner CS 697                  -->
+<!-- ============================================ -->
 
-    {% include 'sections/cta.html' %}
+<section id="cta-697">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Let's build something.</h2>
+            <a href="/contact/" class="cs-button-solid">Start Here</a>
+        </div>
+    </div>
+    <!--SVG Waves Background-->
+    <img class="cs-background" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fwaves-3.svg" alt="wave graphic" width="1920" height="318" loading="lazy" decoding="async" aria-hidden="true">
+</section>
 
 {% endblock %}

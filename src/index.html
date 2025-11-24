@@ -1,6 +1,6 @@
 ---
-title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
-description: "Meta description for the page"
+title: "Website3000 | Hand-Coded Websites for Melbourne Small Businesses"
+description: "Melbourne web designer building lightning-fast, hand-coded websites for small businesses. 100/100 Google scores, subscription from $150/month. No WordPress, no templates."
 permalink: "/"
 tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
 ---
@@ -11,13 +11,15 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <!-- Critical styles are loaded first -->
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
+    <link rel="preload" as="image" href="/assets/images/speed1-m.webp" media="(max-width: 600px)">
+    <link rel="preload" as="image" href="/assets/images/speed1-d.webp" media="(min-width: 601px)">
+
     <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
     {% if kit.isProduction %}
         <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="/assets/css/local.css">
         </noscript>
-
     {% else %}
         <link rel="stylesheet" href="/assets/css/local.css"/>
     {% endif %}
@@ -29,416 +31,542 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
 
-    <section id="hero-143">
-        <div class="cs-container">
-            <span class="cs-topper">CodeStitch Presents</span>
-            <h1 class="cs-title">The Intermediate Website Kit (LESS)</h1>
+<section id="hero-227">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <span class="cs-topper">Mobile Responsive | Highly Secure | Lightning-Fast</span>
+            <h1 class="cs-title">Professional static websites that load in under 1 second</h1>
             <p class="cs-text">
-                Building faster websites, faster. Just clone, update _data/client.js, swap out some sections, and away you go!
+                Hand-coded bulletproof website designs with 100/100 Google PageSpeed scores. Custom built for businesses to convert visitors into customers. From $150/month.
             </p>
-            <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+            <a href="/contact/" class="cs-button-solid">Get Started</a>
+            <a href="/advantage/" class="cs-button-transparent">Why Static Works</a>
         </div>
-
-        <!-- Background Image -->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Large Tablet Image-->
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Services                   -->
-    <!-- ============================================ -->
-
-    <section id="h-services-143">
+        <!--Service Cards-->
         <ul class="cs-card-group">
             <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">Full Kitchen Remodel</h2>
+                <div class="cs-link"> <!-- V chgd from <a> to div and removed href -->
+                    <span class="cs-number">BE FAST</span>
+                    <h2 class="cs-h2">Sub-second loading</h2>
+                    <p class="cs-item-text">
+                        Zero bloat from plugins or page builders. Instant loading on all devices.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-link"> <!-- V chgd from <a> to div and removed href -->
+                    <span class="cs-number">BE FOUND</span>
+                    <h2 class="cs-h2">Perfect Google scores</h2>
+                    <p class="cs-item-text">
+                        Scoring 95–100/100 on Google's PSI improves ranking which drives traffic.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-link"> <!-- V chgd from <a> to div and removed href -->
+                    <span class="cs-number">BE PROFITABLE</span>
+                    <h2 class="cs-h2">Get real results</h2>
+                    <p class="cs-item-text">
+                        Sites that load in 1 second convert 3X better than sites that take 5 seconds.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-picture">
+        <!-- WebP format for modern browsers - Mobile -->
+        <source media="(max-width: 600px)"
+                srcset="/assets/images/speed1-m.webp"
+                type="image/webp">
+        <!-- WebP format for modern browsers - Desktop -->
+        <source media="(min-width: 601px)"
+                srcset="/asseets/images/speed1-d.webp"
+                type="image/webp">
+
+        <!-- Fallback JPEG for older browsers - Mobile -->
+        <source media="(max-width: 600px)" 
+            srcset="/assets/images/speed1-m.jpg">
+        <!-- Fallback JPEG for older browsers - Desktop -->
+        <source media="(min-width: 601px)" 
+                srcset="/assets/images/speed1-d.jpg">
+    
+        <!-- Default fallback image -->
+        <img decoding="async" 
+             src="/assets/images/speed1-d.jpg" 
+             alt="highway with light trails at night" 
+             width="1500" 
+             height="1000" 
+             aria-hidden="true">
+
+    </picture>
+</section>
+
+
+<!-- ============================================ -->
+<!--  6-card intro - Services CS 1628 intro without 4 cards -->
+<!-- ============================================ -->
+
+<section id="services-1628">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Everything a small business needs</span>
+                <h2 class="cs-title">Your most important online asset</h2>
+            </div>
+            <p class="cs-text">
+                40% of consumers leave after a 3-second wait. Anyone can build a pretty website — but speed wins customers. Our lean, secure static sites consistently outperform bloated WordPress templates that lag at 5+ seconds.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--  6 card section - Services CS 285 without top part         -->
+<!-- ============================================ -->
+
+<section id="services-285">
+    <div class="cs-container">
+       <!-- V removed div here with class cs-content/topper/title/text -->
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/advantage/" class="cs-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="/assets/svgs/phone.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">MOBILE RESPONSIVE</h3>
+                    <p class="cs-item-text">
+                        60% of web traffic is from mobile phones, so we design mobile-first. Your website adapts seamlessly to all screen sizes.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/advantage/#services-564" class="cs-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="/assets/svgs/feather.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">ZERO BLOAT</h3>
+                    <p class="cs-item-text">
+                        No plugins, page builders or WordPress templates. Just purpose-built, hand-written code with zero waste–and fast loading.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/advantage/#services-1628-4" class="cs-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="/assets/svgs/shield.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">BULLETPROOF SECURITY</h3>
+                    <p class="cs-item-text">
+                        WordPress and other builders are vulnerable to hacks. Our sites are just static HTML/CSS files—there's nothing <i>to</i> hack.
+                    </p>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/advantage/#services-564-2" class="cs-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="/assets/svgs/google-logo.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">GOOGLE APPROVED</h3>
+                    <p class="cs-item-text">
+                        Good Core Web Vitals metrics and fast loading keep customers longer. Google values this, and ranks your website higher.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/faq/#seo" class="cs-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="/assets/svgs/seo.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">SEARCH ENGINE OPTIMIZED</h3>
+                    <p class="cs-item-text">
+                        We include on-page SEO which involves the right keywords, titles, image tags and page structure for your business.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/about/" class="cs-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="/assets/svgs/map-pin.svg" loading="lazy" decoding="async" alt="icon" width="38" height="52" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">BASED IN AUSTRALIA</h3>
+                    <p class="cs-item-text">
+                        ..in Melbourne CBD's postcode 3000 (hence the name). But digital borders are thin. I work with clients everywhere.
+                    </p>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</section>
+                                
+                
+
+<!-- ============================================ -->
+<!--  Portfolio - Services CS 341, 3 card         -->
+<!-- ============================================ -->
+
+
+<section id="services-341">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Portfolio</span>
+            <h2 class="cs-title">Proven website frameworks</h2>
+            <p class="cs-text">
+                Our portfolio sites below follow proven conversion patterns with clean layouts, clear messaging and strategic designs that turn browsers into buyers.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="https://camberwellness.netlify.app" target="_blank" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/camberwellness-s.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/camberwellness-s.webp">
+                        <img loading="lazy" decoding="async" src="/assets/images/camberwellness-s.webp" alt="cleaner" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Camberwellness Clinic</h3>
+                    <p class="cs-item-text">
+                        &check; Easy to locate critical information<br>
+                        &check; Strong trust signals, content rich<br>
+                        &check; Multiple CTAs (Call to Action)<br>
+                        &check; 99/100 Google performance score
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="https://fitness3k.netlify.app" target="_blank" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/fitness3k-s.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/fitness3k-s.webp">
+                        <img loading="lazy" decoding="async" src="/assets/images/fitness3k-s.webp" alt="cleaner" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Fitness3K Gym</h3>
+                    <p class="cs-item-text">
+                        &check; Familiar fitness visuals & pattern<br>
+                        &check; Attractive dark theme easy to expand<br>
+                        &check; Conversion-oriented web experience<br>
+                        &check; 100/100 Google performance score
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="https://proelectricals.netlify.app" target="_blank" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/proelectricals-s.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/proelectricals-s.webp">
+                        <img loading="lazy" decoding="async" src="/assets/images/proelectricals-s.webp" alt="cleaner" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">ProElectricals</h3>
+                    <p class="cs-item-text">
+                        &check; Tradie-friendly trust signals<br>
+                        &check; One-page minimalist site<br>
+                        &check; Fast quote form for engagement<br>
+                        &check; 100/100 Google performance score
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--       Timetable intro - CS 1731      -->
+<!-- ============================================ -->
+
+<section id="timetable-1731">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Future-proof Technology</span>
+                <h2 class="cs-title">Why static sites are smarter in the age of AI</h2>
+                <p class="cs-text">For many businesses, an informational website with 3 to 5 pages and a simple contact form is more than sufficient for a professional online presence. Static sites excel at this.<br><br>
+                As AI reshapes how websites get discovered, clean code structure becomes critical. Static sites provide the semantic HTML and fast performance that search engines and AI systems prioritize — which helps you in both traditional search and emerging AI-powered discovery.
+                </p>
+            </div>
+            <a href="/advantage/" class="cs-button-solid">Read More</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--       Table comparison CS 1669         -->
+<!-- ============================================ -->
+
+<section id="table-1669">
+    <div class="cs-container">
+
+        <table class="cs-table">
+            <thead>
+                <tr class="cs-color">
+                    <th class="cs-th">Benefits</th>
+                    <th class="cs-th">Static Sites (Website3000)</th>
+                    <th class="cs-th">WordPress & others</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cs-tr">
+                    <td class="cs-td">Loading speed</td>
+                    <td class="cs-td">Under 1 second</td>
+                    <td class="cs-td">3–8 seconds</td>
+                </tr>
+                <tr class="cs-tr">
+                    <td class="cs-td">Google PageSpeed score</td>
+                    <td class="cs-td">95–100/100 consistently</td>
+                    <td class="cs-td">40–70/100 average</td>
+                </tr>
+                <tr class="cs-tr">
+                    <td class="cs-td">Security</td>
+                    <td class="cs-td">Zero vulnerabilities—no databases to hack</td>
+                    <td class="cs-td">Constant security/plugin updates required</td>
+                </tr>
+                <tr class="cs-tr">
+                    <td class="cs-td">Monthly maintenance</td>
+                    <td class="cs-td">None — we handle everything</td>
+                    <td class="cs-td">Hours of updates & troubleshooting</td>
+                </tr>
+                <tr class="cs-tr">
+                    <td class="cs-td">Mobile performance</td>
+                    <td class="cs-td">Mobile-first responsive design</td>
+                    <td class="cs-td">Template limitations hurt mobile experience</td>
+                </tr>
+                <tr class="cs-tr">
+                    <td class="cs-td">Conversion rates</td>
+                    <td class="cs-td">Optimized for your business goals</td>
+                    <td class="cs-td">Generic templates reduce conversions</td>
+                </tr>
+                <tr class="cs-tr">
+                    <td class="cs-td">Total costs</td>
+                    <td class="cs-td">Predictable $150/month & time savings</td>
+                    <td class="cs-td">Variable</td>
+                </tr>
+                <tr class="cs-tr">
+                    <td class="cs-td"><b>AI crawler optimization</b></td>
+                    <td class="cs-td">Clean semantic HTML for AI discovery</td>
+                    <td class="cs-td">Bloated markup confuses AI systems</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+<!-- ============================================ -->
+<!--   How it works - Timeline CS 1517      -->
+<!-- ============================================ -->
+
+<section id="timeline-1517">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper"></span>
+                <h2 class="cs-title">How it works</h2>
                 <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    From brief to blazing fast in four weeks.
+                </p>
+            </div>
+            <!--
+            <div class="cs-image-group">
+               
+                <picture class="cs-picture">
+                    <img src="/assets/images/laptop-mockup-small.jpg" alt="laptop" width="199" height="140" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <picture class="cs-picture">
+                    <img src="/assets/images/phone-mockup-small.jpg" alt="certification" width="199" height="140" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+                <picture class="cs-picture">
+                    <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/cert2.png" alt="certification" width="199" height="140" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+            </div>
+            -->
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-date">Step 1</span>
+                <h3 class="cs-h3">Questionnaire</h3>
+                <p class="cs-item-text">
+                    After a contract is signed, I send you an email with a few questions about your business and what sets you apart.
                 </p>
             </li>
             <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">Exterior Repairs</h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <span class="cs-date">Step 2</span>
+                <h3 class="cs-h3">Design Approval</h3>
+                <p class="cs-item-text">
+                    I expand on the content you provide and build out the site structure. Review the initial draft and see if you'd like to change any details or images.
                 </p>
             </li>
             <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">Utility Maintenance</h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <span class="cs-date">Step 3</span>
+                <h3 class="cs-h3">Development</h3>
+                <p class="cs-item-text">
+                    I hand-code the website and set up the domain name (if needed), hosting, email alerts for contact form submissions etc. You can review a demo link before the site goes live.
                 </p>
             </li>
             <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">Design Consultation</h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <span class="cs-date">Live site</span>
+                <h3 class="cs-h3">Never worry about your website again</h3>
+                <p class="cs-item-text">
+                    
                 </p>
             </li>
         </ul>
-    </section>
+    </div>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+</section>
 
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Stitch Law</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/about/" class="cs-button-solid">About Us</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- ============================================ -->
-    <!--             Side By Side Reverse             -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--       Pricing CS 264                    -->
+<!-- ============================================ -->
 
-    <section id="RPsbsr-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Stitch Law</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <a href="/about/" class="cs-button-solid">About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery-48">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Portfolio</span>
-                <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            </div>
-            <div class="cs-image-group">
-                <div class="cs-row cs-row-1">
-                    <!-- Row 1-->
-                    <picture class="cs-picture cs-picture-1">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 182, height: 250 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 182, height: 250 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 182, height: 250 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 634, height: 798 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 634, height: 798 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 634, height: 798 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | jpeg %}" alt="new hallway" width="413" height="567" loading="lazy" decoding="async">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 634, height: 886 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 634, height: 886 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 634, height: 886 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="new home construction" width="413" height="629" loading="lazy" decoding="async">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 182, height: 226 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 182, height: 226 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 182, height: 226 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 634, height: 720 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 634, height: 720 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 634, height: 720 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | jpeg %}" alt="building a new wall" width="413" height="512" loading="lazy" decoding="async">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <picture class="cs-picture cs-picture-1">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 182, height: 216 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 182, height: 216 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 182, height: 216 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 634, height: 692 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 634, height: 692 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 634, height: 692 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | jpeg %}" alt="new kitchen" width="413" height="492" loading="lazy" decoding="async">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 182, height: 228 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 182, height: 228 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 182, height: 228 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 634, height: 728 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 634, height: 728 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 634, height: 728 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | jpeg %}" alt="apartment addition" width="413" height="517" loading="lazy" decoding="async">
-                    </picture>
-
-                    <picture class="cs-picture cs-picture-3">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 634, height: 886 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 634, height: 886 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 634, height: 886 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="kew kitchen cabinets" width="413" height="629" loading="lazy" decoding="async">
-                    </picture>
-
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <picture class="cs-picture cs-picture-1">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 634, height: 880 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 634, height: 880 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 634, height: 880 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | jpeg %}" alt="new black window structure" width="413" height="625" loading="lazy" decoding="async">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 182, height: 198 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 182, height: 198 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 182, height: 198 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 634, height: 636 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 634, height: 636 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 634, height: 636 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | jpeg %}" alt="kitchen rebovation" width="413" height="452" loading="lazy" decoding="async">
-                    </picture>
-
-                    <picture class="cs-picture cs-picture-3">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 634, height: 886 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 634, height: 886 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 634, height: 886 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="bathroom renovation" width="413" height="629" loading="lazy" decoding="async">
-                    </picture>
-
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-            </div>
-            <a href="/project-one/" class="cs-button-solid">View a Project</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews-67">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Reviews</span>
-                <h2 class="cs-title">Words From Our Customers</h2>
-                <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+<section id="services-264">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title">SIMPLE PRICING.<br>TWO OPTIONS.<br>REAL RESULTS.</h2>
+            <p class="cs-text">
+                Your business deserves more than generic templates and sluggish load times. Our hand-coded websites are engineered for performance and tailored to you.
             </p>
-            </div>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/newsvgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                    Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
-                </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
+            <a href="/contact/" class="cs-button-solid">Get Started</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">Monthly Subscription</h3>
+                <div class="cs-price">$0 down<br>$150/month</div>
+                <ul class="cs-features">
+                    <li>&#x2705; Custom 5-page website</li>
+                    <li>&#x2705; Unlimited edits</li>
+                    <li>&#x2705; Hosting included</li>
+                    <li>&#x2705; Direct access to Vin (Hi that's me)</li>
+                    <li>&#x2705; On-page SEO</li>
+                    <li>&#x2705; Perfect 95–100 Google PSI scores</li>
+                </ul>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">One-Time Purchase</h3>
+                <div class="cs-price">$3,000</div>
+                <ul class="cs-features">
+                    <li>&#x2705; Custom 5-page website</li>
+                    <li>&#x2705; Host anywhere</li>
+                    <li>&#x2705; All source code files</li>
+                    <li>&#x2705; On-page SEO</li>
+                    <li>&#x2705; Perfect 95–100 Google PSI scores</li>
+                    <li>&#128683; No ongoing support</li>
+                </ul>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Power-ups</h3>
+                <div class="cs-price"></div>
+                <ul class="cs-features">
+                    <li>&#x2705; Additional webpages: $100 each/once</li>
+                    <li>&#x2705; Blog setup: $200/once</li>
+                    <li>&#x2705; Blog posts 3–5/month: $100/month</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--              FAQ CS 254                      -->
+<!-- ============================================ -->
+
+<section id="faq-254">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">The Details</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+            <p class="cs-text">
+                If your question isn't answered here, please <a href="/contact/">send us a message</a> and I'll get back to you as soon as possible.
+            </p>
+        </div>
+        <div class="cs-flex-group">
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">How does website subscription work?</button>
+                    <p class="cs-item-p">
+                        Think of it like Spotify or Netflix—pay monthly, enjoy the service. Traditional web design means paying $5,000–$10,000 upfront, then you're on your own for updates, edits, maintenance, hosting.<br><br>
+                        Our subscription model flips this : small monthly payments give you a live website plus unlimited edits, hosting, automatic security patches as technology evolves, SEO updates, and even optional weekly blog content—all included so you get back your time.<br><br>
+                        <b>You can cancel anytime and the site goes offline.</b> This model lets us stay in business without charging you thousands upfront, plus you get ongoing support instead of the usual 'build-and-forget' approach.
+                    </p>
                 </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/newsvgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                    Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
+                <li class="cs-faq-item">
+                    <button class="cs-button">What's the minimum subscription length?</button>
+                    <p class="cs-item-p">
+                        12-month minimum, then month-to-month. Cancel anytime after the first year, the site goes offline (you keep your domain, of course).<br><br>
+                        No setup fees, no exit fees, no lock-in contracts. We work with business owners who understand that SEO and Google rankings take time to build.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">How come your prices are lower than others?</button>
+                    <p class="cs-item-p">
+                        Traditional agencies charge massive upfront fees to cover sales teams, office rent and layers of staff. I'm a solo specialist without those overheads. Working from my Melbourne home office, I focus entirely on what you're paying for : hand-coded websites that load fast. No bloated team or fancy office. No "Press 3 for support" — just direct access to the guy actually building your site.<br><br>
+                        Moreover, small businesses don't always have thousands to spend on a new project. With a monthly subscription, your website can generate leads and potentially pay for itself. This makes the subscription model efficient, not cheap.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">What's this about Google PSI scores?</button>
+                    <p class="cs-item-p">
+                        PSI = PageSpeed Index. It's a Google tool that analyzes website performance on both mobile and desktop devices. Since slow websites frustrate users and cause them to leave, page speed has become a critical part of how search engines rate your website. Even fancy web design agencies' websites have poor scores! 90/100 is considered good; we aim for 95–100.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">Why don't you use WordPress?</button>
+                    <p class="cs-item-p">
+                        WordPress has pretty themes but can be unreliable. Its performance depends entirely on templates and plugins—often from different developers who may have cut corners or used outdated practices. Plugin conflicts are common, and a simple update can break your entire site. Even with regular maintenance, WordPress sites face constant security vulnerabilities, hacking attempts and compatibility issues.<br><br>
+                        Our custom code eliminates all this. It's just HTML & CSS — lightweight, secure, and built for <b>your</b> business. No template limitations, no plugin conflicts, no databases to hack — just a bulletproof website that works beautifully on any device.
+                    </p>
                 </li>
             </ul>
-            <a href="/reviews/" class="cs-button-solid">Read All Reviews</a>
+            <div class="cs-cta">
+                <h3 class="cs-h3">Want to learn more?</h3>
+                <p class="cs-cta-p">
+                    See the full list of FAQs for details about the process, costs, and how it all works.
+                </p>
+                <a href="/faq/" class="cs-button-solid">All FAQs</a>
+            </div>
         </div>
-    </section>
+    </div>
 
-    {% include 'sections/cta.html' %}
+    <script>
+        const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+            item.classList.toggle('active')
+            }
+            item.addEventListener('click', onClick);
+        }               
+    </script>
+</section>
+
+
+<!-- ============================================ -->
+<!--        CTA - banner CS 697                  -->
+<!-- ============================================ -->
+
+<section id="cta-697">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Let's build something.</h2>
+            <a href="/contact/" class="cs-button-solid">Start Here</a>
+        </div>
+    </div>
+    <!--SVG Waves Background-->
+    <img class="cs-background" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fwaves-3.svg" alt="wave graphic" width="1920" height="318" loading="lazy" decoding="async" aria-hidden="true">
+</section>               
+                      
+
+<!-- removed include CTA section -->
 {% endblock %}
