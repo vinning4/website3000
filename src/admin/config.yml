@@ -1,6 +1,6 @@
 # Use DecapBridge PKCE auth (required)
 backend:
-  name: git-gateway
+  name: github
   repo: vinning4/website3000
   branch: main
   auth_type: pkce
