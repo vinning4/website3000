@@ -1,6 +1,10 @@
-# Replace the "backend" object below with the snippet from DecapBridge. We need something here to get the CMS to work locally, but this alone won't work in production
+# Backend configuration for GitHub + DecapBridge authentication
 backend:
-    name: git-gateway
+    name: github
+    repo: vinning4/website3000
+    branch: main
+    base_url: https://api.decapbridge.com
+    auth_endpoint: auth/github
 
 # Keep this to allow you to edit the cms locally
 local_backend: true
