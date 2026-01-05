@@ -5,11 +5,9 @@ backend:
   branch: main
   auth_type: pkce
   base_url: https://auth.decapbridge.com
-  app_id: dbf3d64a-4278-4f32-8c8e-ee024148d580
   auth_endpoint: /sites/dbf3d64a-4278-4f32-8c8e-ee024148d580/pkce
   auth_token_endpoint: /sites/dbf3d64a-4278-4f32-8c8e-ee024148d580/token
   gateway_url: https://gateway.decapbridge.com
-
   # See who did what (optional)
   commit_messages:
     create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
@@ -31,10 +29,6 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Add site links in Decap CMS (optional)
 site_url: https://www.website3000.com
-
-
-
-
 
 
 # Keep this to allow you to edit the cms locally
