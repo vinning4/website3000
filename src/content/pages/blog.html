@@ -4,97 +4,46 @@ description: "Tips, insights and best practices for small business websites. Lea
 permalink: "/blog/"
 ---
 
-{% extends "layouts/base.html" %}
-
-{% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 640, height: 600 }) | avif %}"/>
-    <link rel="stylesheet" href="/assets/css/blog.css">
-{% endblock %}
+{% extends "layouts/blog-base.html" %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
 
-    <div id="banner-310">
+<div class="blog-listing">
+    <div class="blog-listing-container">
         
-        <div class="cs-container">
-            <span class="cs-int-title">Welcome!</span>
-        </div>
+        <!-- Back to homepage link -->
+        <a href="/" class="home-link">← Website3000</a>
 
-        <!-- <h1 class="cs-text">– Coming Soon –</h1> -->
-
-        <!--Background Image-->
-        <picture class="cs-background">
-
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/speed1-d.webp" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+        <!-- Main heading -->
+        <h1 class="blog-main-title">Website3000 Blog</h1>
+        <p class="blog-intro">Read about getting the most from your business website. Concepts cover user experience, online presence, marketing, SEO and more.</p>
         
-        </picture>
-
-    </div>
-
-    <!-- ============================================ -->
-    <!--                 Blog Listings                -->
-    <!-- ============================================ -->
-
-    <div id="blog-listing">
-        <div class="cs-container">
-            {% if collections.post | length == 0 %}
-                <h1 class="cs-title">No Recent Posts</h1>
-            {% else %}
+        <!-- Posts list -->
+        {% if collections.post | length == 0 %}
+            <p class="no-posts">No posts yet. Check back soon!</p>
+        {% else %}
+            <div class="posts-list">
                 {%- for post in collections.post | reverse -%}
-                    <article class="cs-article">
-                        <!--
-                        <picture class="cs-article-image">
-
-                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | avif %}" type="image/avif">
-                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | webp %}" type="image/webp">
-                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | jpeg %}" type="image/jpeg">
-
-                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | avif %}" type="image/avif">
-                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | webp %}" type="image/webp">
-                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | jpeg %}" type="image/jpeg">
-
-                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | avif %}" type="image/avif">
-                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | webp %}" type="image/webp">
-                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | jpeg %}" type="image/jpeg">
-                            <img src="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | jpeg %}" alt="{{ post.data.alt }}" width="824" height="400" decoding="async">
-                        </picture>
-                        -->
-                        <div class="cs-article-group">
-                            <div class="cs-author-group">
-                                <picture class="cs-author-img">
-                                    <img src="/assets/svgs/profile.svg" alt="Profile icon" width="32" height="32" decoding="async" loading="lazy" aria-hidden="true"/>
-                                </picture>
-                                <span class="cs-author-name">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="cs-dot"></span>
-                                <span class="cs-date">{{ post.date | postDate }}</span>
-                            </div>
-                            <h2 class="cs-article-title">
-                                {{ post.data.title }}
-                            </h2>
-                            <p class="cs-article-desc">
-                                {{ post.data.description }}
-                            </p>
-                            <a href="{{ post.url }}" class="cs-button-solid">Continue Reading</a>
-                        </div>
-                    </article>
+                <article class="post-item">
+                    <h2 class="post-item-title">
+                        <a href="{{ post.url }}" class="post-link">{{ post.data.title }}</a>
+                    </h2>
+                    {% if post.data.description %}
+                        <p class="post-item-desc">{{ post.data.description }}</p>
+                    {% endif %}
+                    <!--
+                    <div class="post-meta">
+                        <span class="post-date">{{ post.date | postDate }}</span>
+                    </div>
+                    -->
+                </article>
                 {%- endfor -%}
-            {% endif %}
-        </div>
-
-
-        {# {% include 'components/featured-posts.html' %} #}
+            </div>
+        {% endif %}
+        
     </div>
+</div>
+
+                        
+
 {% endblock %}
