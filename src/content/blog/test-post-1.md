@@ -1,24 +1,54 @@
 ---
-title: Test post 1
-url: test-post-1
-description: Test post 1 decapCMS
+title: Build less. Convert more.
+url: build-less
+description: Adding pages, sliders, animations, and plugins doesn’t grow your
+  business. Clear messaging, fast load times, and one main goal do.
 author: Vin
-date: 2026-01-05T14:45:00.000+11:00
+date: ""
 tags:
   - post
-image: /assets/images/blog/landing.jpg
-imageAlt: Test image
+image: ""
+imageAlt: ""
 ---
-My First CMS Post
+Most small business websites fail for a simple reason: they try to do too much.
 
-This is amazing! From small beginnings come great things.
+More pages don’t create clarity.
+More features don’t create trust.
+More options don’t create action.
+
+They create hesitation.
+
+A website’s job is not to showcase everything you do. Its job is to help the right visitor make a decision. That means focus.
+
+Visitors don’t want to explore your business.
+
+They want to know:
+
+* Are you for me?
+* Can you solve my problem?
+* What should I do next?
+
+If these answers aren’t obvious within seconds, the site isn’t working. It sends the seeker to a competitor's site that does its job.
+
+This is why smaller websites often outperform larger ones. A 3–5 page site forces prioritisation. You decide what matters and remove what doesn’t.
+
+Less content also means less friction:
+
+* Faster load times
+  Clearer messaging
+  Lower maintenance
+  Fewer points of failure
 
 
 
-What I learned today
+None of this is about cutting corners. It’s about reducing noise.
 
-\- How to set up DecapCMS
+Well-designed restraint signals confidence. It tells visitors you know what you’re doing — and that you respect their time.
 
-\- How to use DecapBridge authentication
+A website doesn’t need to be impressive.
 
-\- How to write posts in a rich text/non-markdown interface
+It needs to be useful.
+
+Build less.
+
+The results usually improve.
