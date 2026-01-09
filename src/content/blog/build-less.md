@@ -5,13 +5,14 @@ description: "Most small business websites fail because they try to do too much.
 author: "Vin"
 date: 2025-01-08
 ---
-Most small business websites fail for a simple reason: they try to do too much.
+
+Most small business websites fail because they try to be everything to everyone.
 
 More pages don’t create clarity. More features don’t create trust. More options don’t create action.
 
 They create hesitation. Or worse, confusion.
 
-A website’s job is not to showcase everything you do. Its job is to help the right visitor make a decision. That means focus.
+A website’s job is not to showcase everything you do. It is to help the right visitor make a decision. From first impressions to contacting you, it must funnel a visitor through actions that help them and you.
 
 ## What visitors actually want
 
@@ -21,16 +22,15 @@ Visitors don’t always want to explore your business. They want to know:
 * Can you solve my problem?
 * What should I do next?
 
-If these answers aren’t obvious within seconds, the site isn’t working. It sends your visitor to a competitor's site.
+If these answers aren’t obvious within seconds, the site isn’t working. It sends your visitor to a competitor.
 
-This is why smaller websites often outperform larger ones. A 3–5 page site forces prioritisation. You decide what matters and remove what doesn’t.
+This is why smaller websites often outperform larger ones. A 3-5 page site forces prioritisation. You keep what matters, remove what doesn’t, and create an optimal user journey.
 
-## Less content also means less friction:
+## Fewer pages also means less friction:
 
 * Faster load times
 * Clearer messaging
-* Lower maintenance
-* Fewer points of failure
+* Fewer user choices
 
 None of this is about cutting corners. It’s about cutting noise.
 
@@ -38,4 +38,4 @@ Good website design shows restraint, and this signals confidence. It tells visit
 
 **A website doesn’t need to be big and flashy. It needs to be useful.**
 
-So, build less. The results usually improve.
+So, build your site with less. The results usually improve.
