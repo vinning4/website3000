@@ -3,7 +3,7 @@ title: "Build Less. Convert More."
 url: "build-less"
 description: "Most small business websites fail because they try to do too much. Here's why smaller, focused sites often outperform bigger ones."
 author: ""
-date: 2026-01-06
+date: 2025-11-01
 ---
 
 Most small business websites fail because they try to be everything to everyone.
@@ -38,4 +38,4 @@ Good website design shows restraint, and this signals confidence. It tells visit
 
 **A website doesn’t need to be big and flashy. It needs to be useful.**
 
-So, build your site with less. The results usually improve.
+So, build your site with less. Improve the odds of converting visitors into customers.

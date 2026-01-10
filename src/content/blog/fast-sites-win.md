@@ -3,7 +3,7 @@ title: "Why Fast Websites Win"
 url: "fast-sites-win"
 description: "Speed shapes trust, engagement, and search visibility—before design or copy have a chance to matter."
 author: ""
-date: 2026-01-10
+date: 2025-11-03
 ---
 
 Website speed is not a technical preference. It's a measurable factor in how people (and Google search) respond to a site.
