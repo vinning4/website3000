@@ -3,11 +3,7 @@ title: "The Conversion Ceiling of DIY Websites"
 url: "diy-sites"
 description: "Simply having a website is easy, like putting up a sign. It proves you exist, but doesn't persuade a visitor to reach out."
 author: 
-date: 
-tags:
-    - post
-image: 
-imageAlt:
+date: 2026-01-09
 ---
 
 DIY website builders solve a real problem. They make it easy to get online quickly, with minimal cost and technical effort. It's a good starting point.

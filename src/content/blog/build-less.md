@@ -2,8 +2,8 @@
 title: "Build Less. Convert More."
 url: "build-less"
 description: "Most small business websites fail because they try to do too much. Here's why smaller, focused sites often outperform bigger ones."
-author: "Vin"
-date: 2025-01-08
+author: ""
+date: 2026-01-06
 ---
 
 Most small business websites fail because they try to be everything to everyone.
