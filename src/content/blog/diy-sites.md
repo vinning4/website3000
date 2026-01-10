@@ -34,7 +34,7 @@ This isn’t because business owners are incapable of business website design. W
 
 These aren’t aesthetic choices. They’re outcome-driven ones, learned through repetition, measurement, analysis, experience.
 
-Professionally built websites easily outperform DIY sites for the same reason a skilled editor outperforms a word processor: they impose judgement. They prioritise one pathway over many, one audience over all, and one message over everything else.
+**Professionally built websites easily outperform DIY sites for the same reason a skilled editor outperforms a word processor: they impose judgement.** They prioritise one pathway over many, one audience over all, and one message over everything else.
 
 DIY platforms don’t prevent good results. They simply serve as a starting point. They can prove that you exist, but they don't help a visitor find you and contact you.
 
