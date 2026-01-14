@@ -1,7 +1,7 @@
 ---
 title: "What Is a Static Website (And Why Small Businesses Should Care)"
 url: "what-is-static-website"
-description: "Free builders can cost time, stress and lost leads. You pay eventually—just not upfront."
+description: "A practical overview of static websites, how they differ from dynamic systems, and why they are often the better choice for small businesses."
 author: ""
 date: 2025-11-06
 ---
