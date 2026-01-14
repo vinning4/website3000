@@ -1,7 +1,7 @@
 ---
 title: "The Hidden Cost of 'Free' Website Builders"
 url: "hidden-cost-diy"
-description: "Free builders cost time, stress and lost leads. You pay eventually—just not upfront."
+description: "Free builders can cost time, stress and lost leads. You pay eventually—just not upfront."
 author: ""
 date: 2025-11-05
 ---
