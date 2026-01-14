@@ -1,5 +1,5 @@
 ---
-title: "A Website is a Tool, Not a Project"
+title: "A Website Is a Tool, Not a Project"
 url: "tool-not-project"
 description: "A website rarely fails outright. More often, it quietly stops doing useful work. See why framing matters more than design."
 author: ""
