@@ -8,7 +8,7 @@ date: 2025-11-06
 
 Let's start with what a static site is *not*.
 
-An online store that updates prices, stock levels, user accounts, or orders in real time is a **dynamic** website — it must generate pages on demand and run background processes to respond to user-specific actions. Each visit requires work to be done: the server receives a request, runs application code, queries databases, assembles the page, and then sends that result to the browser. This happens on every page load, often multiple times per visit. This works great for a retail site like Amazon where users need this functionality.
+An online store that updates prices, stock levels, user accounts, or orders in real time is a **dynamic** website — it must generate pages on demand and run background processes to respond to user-specific actions. Each visit requires a task chain: the server receives a request, runs application code, queries databases, assembles the page, and then sends that result to the browser. This happens on every page load, often multiple times per visit. This works great for a retail site like Amazon where users need this functionality.
 
 A **static** website is made of pre-built pages served exactly as written. No background processes. The pre-built pages are HTML, CSS and JavaScript files that don't change often. When someone visits the website, their browser requests a file and the server returns it immediately—no runtime logic, no database queries, no page construction. The browser renders exactly what was authored. The work is done before rather than during the visit. This is great for a consultant, trades business or local service where the website's job is to present information and facilitate contact if needed.
 

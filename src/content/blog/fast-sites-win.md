@@ -16,7 +16,7 @@ Modern browsers expose this clearly. Google’s Core Web Vitals define performan
 
 These metrics are observable, testable, and publicly documented. They are also used directly in search ranking systems.
 
-Speed affects behaviour before design or copy are fully perceived. Pages that load slowly increase abandonment. Pages that respond slowly reduce interaction. Pages that shift unexpectedly erode trust.
+Speed affects behaviour before design or copy are fully perceived. Pages that load slowly increase abandonment. Pages that respond slowly to user input reduce interaction. Pages that shift unexpectedly erode trust.
 
 Performance problems usually come from accumulation:
 
@@ -27,6 +27,4 @@ Performance problems usually come from accumulation:
 
 Static websites avoid many of these issues by default. They deliver prebuilt files directly to the browser, reducing processing, dependencies, and failure points. This built-in simplicity makes performance (speed) easier to achieve and easier to maintain.
 
-Fast websites are not impressive just because they are fast. They are *effective* because they remove friction.
-
-Speed shortens the distance between intent and action. And in practice, that distance matters.
+Fast websites are not impressive just because they are fast. They are *effective* because they remove friction. They shorten the distance between intent and action—and in practice, that distance matters.

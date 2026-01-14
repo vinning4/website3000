@@ -12,7 +12,7 @@ This usually isn’t a design problem. It's a framing issue.
 
 Websites are often treated as bounded efforts: something to organise, publish, and move past. Once online, they recede from view until something forces a transformation.
 
-You don’t think of a cash register as a project. Or a phone network. Or a company vehicle. You think about whether it works, whether it’s reliable, and whether it’s solving your need or slowing you down.
+You don’t think of a cash register as a project. Or a phone network. Or a company vehicle. You think about whether it works, if it’s reliable, and whether it’s solving your need or slowing you down.
 
 Similarly, a website must behave less like a brochure and more like a utility. It sits between you and the outside world, handling first contact at scale. It introduces your business, filters enquiries, answers questions, and builds confidence. If it does this well, it’s a *performing asset*. When it’s slow, unclear, or unreliable, the cost shows up elsewhere.
 
@@ -31,7 +31,7 @@ Nothing has "failed." The tool has simply become harder to use.
 
 ## Tools reveal themselves through use
 
-A site being treated as a tool has a few visible traits:
+The optimal website has a few visible traits:
 
 * It responds quickly, without asking for patience
 * It feels predictable rather than surprising
