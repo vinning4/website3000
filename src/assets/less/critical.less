@@ -9,6 +9,7 @@
 <---           Hero             -->
 <--- -------------------------- -*/
 
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #hero-227 {
@@ -106,6 +107,15 @@
             justify-content: flex-start;
             flex-wrap: wrap;
             box-sizing: border-box;
+
+            // Mobile first - show short version by default (min-width: 0)
+            .desktop-topper {
+                display: none; // Hide desktop version on mobile
+            }
+
+            .mobile-topper {
+                display: block; // Show mobile version on mobile
+            }
         }
 
         .cs-topper {
@@ -404,6 +414,15 @@
         .cs-flex-group {
             /* 44px - 88px */
             margin-left: clamp(2.75rem, 5.9vw, 5.5rem);
+            
+            // Hide mobile-topper at tablet & above (48rem = 768px)
+            .desktop-topper {
+                display: block; // Show desktop version
+            }
+            
+            .mobile-topper {
+                display: none; // Hide mobile version
+            }
         }
 
         .cs-button-solid {
