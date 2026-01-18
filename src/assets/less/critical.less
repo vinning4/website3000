@@ -133,7 +133,14 @@
 
         .cs-title {
             /* 39px - 61px */
-            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem); // << orig CS setting.
+            // font-size: clamp(2.1875rem, 5.5vw, 3.375rem); // moderate choice from below 3.
+
+            // Claude font-size suggestions for clients. Lawyers may prefer conservative, gyms bold.
+            // Conservative: clamp(2rem, 5vw, 3rem)
+            // Moderate: clamp(2.1875rem, 5.5vw, 3.375rem)  
+            // Bold: clamp(2.4375rem, 6.4vw, 3.8125rem)
+
             font-weight: 900;
             line-height: 1.2em;
             text-align: left;
