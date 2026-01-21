@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Website3000</title>
     <link rel="stylesheet" href="/assets/css/blog.css">
+
+    <!-- <link rel="stylesheet" href="/assets/css/root.css"> 
+        Not using. V only added to test blog title orange color of '3000'.
+        First used 'var(--primary)' which had no effect because blog-base.html doesn't link to root.css where '--primary' is defined.
+        It's also coz we created a new blog.html file without codestitch (cs-xyz) classes which are styled in root.less. With claude's help, we created new class for h1 title class="blog-main-title" — this is not styled in root.
+        So for now, to make '3000' orange, using inline css with color: #ff6a3e.
+    -->
+    
     {% block head %}{% endblock %}
 </head>
 <body>
