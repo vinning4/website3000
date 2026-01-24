@@ -505,15 +505,15 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: (24/16rem);
+            //gap: (24/16rem);
         }
 
         .cs-logo {
             width: auto;
-            max-width: (280/16rem); /* more room for wider logos */
-            // height: 100%; 
-            height: (64/16rem); /* same ht as desktop now */
-            margin: 0 auto 0 0;
+            max-width: (320/16rem); /* more room for wider logos */
+            //height: 100%; 
+            height: (80/16rem);
+            margin: (-10/16rem) auto (-10/16rem) 0; /* 👈 Negative top & bottom margins to reduce header ht in mobile after increased logo size */
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
             padding: 0;
@@ -1008,11 +1008,11 @@
         }
 
         .cs-logo {
-            width: 15%; /* takes this much of container width */
+            width: auto; /* takes this much of container width */
             max-width: (320/16rem); /* decides/prevents logo getting too wide */
-            height: (60/16rem); /* V increased from 32/16rem. Controls logo ht. */
+            height: (80/16rem); /* V increased from 32/16rem. Controls logo ht. */
             /* margin-right auto pushes everything away from it to the right */
-            margin: 0 auto 0 0;
+            margin: 0 (40/16rem) 0 0;
             padding: 0;
             display: flex;
             justify-content: flex-start;
@@ -1020,7 +1020,7 @@
             z-index: 100;
 
             img {
-                width: auto;
+                width: 100%;
                 height: 100%;
                 /* ensures the image never overflows the container. It stays contained within its width & height and expands to fill it, then stops once it reaches an edge */
                 object-fit: contain;
@@ -1201,8 +1201,6 @@
                                 
 
 
-
-
 /*-- -------------------------- -->
 <---          Footer            -->
 <--- -------------------------- -*/
@@ -1236,8 +1234,9 @@
 
         .cs-logomark {
             width: auto;
-            height: (72/16rem); // for logo 2 neon blue/green
-            /* filter: invert(100%); << no need as transparent PNG img works on dark footer bg. */
+            height: (74/16rem); // need not dominate footer so not too big.
+
+            /* filter: invert(100%); << no need but can use with transparent png in future. Right now using logo4F, not transp, has same bg as footer #1f1f1f  */
         }
 
         .cs-ul-wrapper {
