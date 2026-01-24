@@ -995,7 +995,8 @@
             margin: auto;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
-            padding: 0 (24/16rem);
+            //padding: 0 (24/16rem);
+            padding: 0 (24/16rem) 0 (12/16rem); /* Left: 12px instead of 24px */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1009,10 +1010,12 @@
 
         .cs-logo {
             width: auto; /* takes this much of container width */
-            max-width: (320/16rem); /* decides/prevents logo getting too wide */
-            height: (80/16rem); /* V increased from 32/16rem. Controls logo ht. */
+            max-width: (360/16rem); /* decides/prevents logo getting too wide */
+            //height: (90/16rem); /* V increased from 32/16rem. Controls logo ht. */
+            height: clamp(70px, 7vw, 90px);
+
             /* margin-right auto pushes everything away from it to the right */
-            margin: 0 (40/16rem) 0 0;
+            margin: 0 (40/16rem) 0 (-10/16rem);
             padding: 0;
             display: flex;
             justify-content: flex-start;
