@@ -65,7 +65,7 @@
             /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
             /* 144px - 300px - leaving extra space for the navigation */
             /* changes on tablet */
-            padding: clamp(9rem, 25.95vw, 18.75rem) 0 0;
+            padding: clamp(9rem, 23vw, 18.75rem) 0 0;
             /* 60px - 200px */
             padding-bottom: clamp(3.75rem, 12.5vw, 25rem);
             margin: auto;
@@ -101,7 +101,8 @@
             margin-left: (16/16rem);
             width: 80vw;
             /* 464px - 562px */
-            max-width: clamp(29rem, 60vw, 35.125rem);
+            //max-width: clamp(29rem, 60vw, 35.125rem);
+            max-width: clamp(29rem, 60vw, 40rem);
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
@@ -133,9 +134,11 @@
 
         .cs-title {
             /* 39px - 61px */
-            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem); // << orig CS setting.
-            // font-size: clamp(2.1875rem, 5.5vw, 3.375rem); // moderate choice from below 3.
+            // font-size: clamp(2.4375rem, 6.4vw, 3.8125rem); // << orig CS setting.
 
+            font-size: clamp(1.875rem, 6vw, 2.5rem); // For longer title, reduced size a bit.
+
+            // font-size: clamp(2.1875rem, 5.5vw, 3.375rem); // moderate choice from below 3...
             // Claude font-size suggestions for clients. Lawyers may prefer conservative, gyms bold.
             // Conservative: clamp(2rem, 5vw, 3rem)
             // Moderate: clamp(2.1875rem, 5.5vw, 3.375rem)  
@@ -154,7 +157,7 @@
 
         .cs-text {
             /* 16px - 20px */
-            font-size: clamp(1rem, 1.95vw, 1.25rem);
+            font-size: clamp(0.9rem, 1.95vw, 1.1rem);
             line-height: 1.5em;
             text-align: left;
             width: 100%;
@@ -432,6 +435,8 @@
             }
         }
 
+        
+
         .cs-button-solid {
             margin-bottom: 0;
         }
@@ -527,8 +532,20 @@
 }
 
 @media only screen and (min-width: 64rem) { /* V added to make 2 buttons visible on desktop above the fold */
-    .cs-flex-group {
-       margin-top: -4rem;
+    #hero-227 {
+
+        .cs-container {
+            padding: clamp(9rem, 24vw, 17.75rem) 0 0;
+        }
+
+        .cs-flex-group {
+            max-width: clamp(29rem, 60vw, 45rem); // Bit wider max 45rem for longer title.
+            margin-top: -4rem;
+        }
+
+        .cs-title {
+            font-size: clamp(2.4rem, 5vw, 3.2rem); // V added bit larger title font for desktop
+        }
+
     }
 }
-
