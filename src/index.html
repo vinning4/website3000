@@ -8,6 +8,11 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    <!-- preloading font first to avoid render delay -->
+    <link rel="preload" as="font" type="font/woff2" 
+    href="/assets/fonts/roboto-v29-latin-900.woff2" 
+    crossorigin="anonymous">
+
     <!-- Critical styles are loaded first -->
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
@@ -582,8 +587,8 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <a href="/contact/" class="cs-button-solid">Start Here</a>
         </div>
     </div>
-    <!--SVG Waves Background-->
-    <img class="cs-background" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fwaves-3.svg" alt="wave graphic" width="1920" height="318" loading="lazy" decoding="async" aria-hidden="true">
+    <!-- SVG Waves Background removed below. Was digitaloceanspaces link. Instead added 'background-image' prop in local.less -->
+    
 </section>
                       
 
