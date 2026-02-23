@@ -42,6 +42,6 @@ The more effort required to understand a page, the less likely action becomes. U
 
 ## Structure Determines Outcome
 
-Conversion improves when structure is intentional.
+When the offer and the audience are clear, emphasis is controlled, and visitors are given direction.
 
-When the offer and the audience are clear, emphasis is controlled, and visitors are given direction. 88% of users contact a business within 24 hours of searching via mobile. Performance improves when your site helps them decide immediately.
+88% of users contact a business within 24 hours of searching via mobile. To make your website effective, use intentional structure to guide your visitors to connect with you.
