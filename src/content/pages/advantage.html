@@ -35,7 +35,7 @@ permalink: "/advantage/"
 
 
 <!-- ============================================ -->
-<!--  Do things diff 1 - Services SBS CS 564    -->
+<!--  Img + Static sites are fast - Services SBS CS 564    -->
 <!-- ============================================ -->
 
 <section id="services-564">
@@ -82,9 +82,8 @@ permalink: "/advantage/"
 </section>
 
 <!-- ============================================ -->
-<!--  Do things diff 2 - Services SBS CS 564    -->
+<!--  Good UX helps Google ranking + img - Services SBS CS 564    -->
 <!-- ============================================ -->
-
 
 <section id="services-564-2">
     <div class="cs-container">
@@ -152,7 +151,7 @@ permalink: "/advantage/"
 </section>
 
 <!-- ============================================ -->
-<!--             Table CS 1669                    -->
+<!--  Comparison table W3 v. Wordpress - AI section - Table CS 1669    -->
 <!-- ============================================ -->
 
 <section id="table-1669">
@@ -230,33 +229,34 @@ permalink: "/advantage/"
                 &rarr; Average WordPress site has 22 plugins installed.<br>
                 &rarr; Plugin conflicts cause 80% of WordPress crashes.
             </p>
-        </div>
-        <!--                   
-            These "Micro Stitches" are to be placed inside the .cs-content group of Side By Side Stitches.  Typically after the .cs-title or .cs-text. They are used to add more design flair to a Stitch as well as convey more information in a different way.
-        -->
-        <ul id="list-1113" class="cs-ul">
-            <li class="cs-li">
-                <h3 class="cs-h3">Security by Design</h3>
-                <p class="cs-li-text">
-                    WordPress sites create multiple attack vectors through databases, plugins, and server-side processing. Hackers target WordPress because it's everywhere, and vulnerabilities are well-documented. Miss an update, and you're exposed.<br><br>
-                    Static sites eliminate these risks entirely because their architecture itself is the security. Without databases, server-side code or plugins, there's simply nothing for hackers to exploit. Just clean HTML, CSS and JavaScript files delivered via superfast CDN (Content Delivery Network).
-                </p>
-            </li>
-            <!--
-            <li class="cs-li">
-                <h3 class="cs-h3">Our Vision</h3>
-                <p class="cs-li-text">
-                    To be the world’s most exciting leader in automotive business intelligence solutions. We will generate excitement through implementing pioneering ideas, problem solving & going beyond our customers’ expectations.
-                </p>
-            </li>
-            -->
-        </ul>                      
+        </div>               
     </div>
 </section>
 
+<!-- ============================================ -->
+<!--         Img + Security by design           -->
+ <!-- ============================================ -->
 
-
-
+<section id="services-564-3">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/security-m.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/security-d.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/security-d.jpg" alt="security logo" width="630" height="528" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title">Security by design</h2>
+            <h3 class="cs-h3"></h3>
+            <p class="cs-text">
+                WordPress sites create multiple attack vectors through databases, plugins, and server-side processing. Hackers target WordPress because it's everywhere, and vulnerabilities are well-documented. Miss an update, and you're exposed.<br><br>
+                Static sites eliminate these risks entirely because their architecture itself is the security. Without databases, server-side code or plugins, there's simply nothing for hackers to exploit. Just clean HTML, CSS and JavaScript files delivered via superfast CDN (Content Delivery Network).
+            </p>
+        </div>
+    </div>
+</section>
 
 
 {% endblock %}
