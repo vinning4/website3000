@@ -52,7 +52,7 @@ Being able to edit a website at any time is only useful if frequent editing is r
 
 Most businesses update prices occasionally, copy infrequently, and pages rarely. In these cases, simplicity outperforms flexibility. A website that works consistently without intervention is often more valuable than one that is endlessly adjustable.
 
-## The right tool must fit the job
+## The right tool fits the job
 
 CMS platforms are not inherently flawed. They are effective when the problem they solve is real.
 
