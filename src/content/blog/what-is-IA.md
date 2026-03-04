@@ -6,7 +6,7 @@ author: ""
 date: 2025-11-09
 ---
 
-IA is the strategic organisation, structure, and labelling of content so a site feels intuitive, predictable, and easy to navigate. It is the underlying blueprint that decides:
+IA is a website's blueprint. It is the strategic organisation, structure, and labelling of content so a site feels intuitive, predictable, and easy to navigate. It decides:
 
 - what appears first
 - what is grouped together
