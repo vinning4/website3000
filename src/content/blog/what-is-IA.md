@@ -79,8 +79,7 @@ A logical hierarchy helps search engines understand which pages matter most.
 > **Maintenance**<br>
 Clear structure reduces future reorganisation as the business evolves.
 
-Most small business sites fail at this and it's not for lack of effort. It's because they are designed before structuring.
-
+Many small business sites fail at this and it's not for lack of effort. It's due to designing before structuring:<br>
 Visual style is chosen before hierarchy is defined. Pages are created before purpose is clarified. Navigation is built around what the business offers, not what the visitor is trying to achieve.
 
 Information Architecture corrects that order. Structure first, design second.
