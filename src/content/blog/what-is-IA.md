@@ -21,7 +21,7 @@ If a site underperforms, it's often due to poor organisation rather than design.
 
 Navigation that reflects internal departments instead of user goals.  
 Services listed without hierarchy.  
-Pages exist because they "should", not because they guide a decision.  
+Pages that exist because they "should", not because they guide a decision.  
 
 When unclear structure makes visitors think too much, they leave.
 
