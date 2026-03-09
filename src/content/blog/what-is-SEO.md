@@ -8,7 +8,7 @@ date: 2025-11-10
 
 Search engine optimisation (SEO) determines whether a business can be found online. When someone searches for a service like yours, Google must decide which pages deserve to appear first. That decision is not random. It is based on signals that help the search engine understand what your website offers, how reliable it is, and whether it provides a useful answer.
 
-Google processes more than **8.5 billion searches per day**. Each search triggers a rapid evaluation of thousands — sometimes millions — of pages. SEO is the discipline of ensuring your site can participate in that evaluation successfully.
+Google processes more than **13 billion searches per day**. Each search triggers a rapid evaluation of thousands — sometimes millions — of pages. SEO is the discipline of ensuring your site can participate in that evaluation successfully.
 
 Contrary to popular belief, SEO is not primarily about tricks, hacks, or stuffing pages with keywords. At its core, it is about clarity: helping search engines interpret your website the same way a human visitor would.
 
