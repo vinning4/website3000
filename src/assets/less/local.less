@@ -7,7 +7,7 @@
 
 
 /*-- -------------------------- -->
-<--- CS 1628 only top section without 4 cards -->
+<--- Intro to 6 cards - CS 1628 -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
@@ -115,9 +115,9 @@
 /* ----- End of CS 1628 top part -----  */
 
 
-/*-- -------------------------- -->
-<--- 6 card section Services CS 285 without top part -->
-<--- -------------------------- -*/
+/*-- ---------------------------------------------------------- -->
+<--- 6 cards features - Services CS 285 without intro part -->
+<--- ------------------------------------------------------------ -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -276,13 +276,14 @@
 /* End of CS 285 with 6 cards without top part  */
 
 
+
 /*-- -------------------------- -->
-<-- Portfolio 3 card section - Services CS 341 -->
+<--- Portfolio 4 tiles - Gallery mosaic CS 42 (edited from 6 tiles) -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
+/* Mobile */
 @media only screen and (min-width: 0rem) {
-    #services-341 {
+    #gallery-42 {
         padding: var(--sectionPadding);
         background-color: #f7f7f7;
 
@@ -299,138 +300,178 @@
 
         .cs-content {
             /* set text align to left if content needs to be left aligned */
-            text-align: center;
+            text-align: left;
             width: 100%;
             display: flex;
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
+            align-items: flex-start;
         }
 
-        .cs-card-group {
+        .cs-topper {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            max-width: (630/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+
+        .cs-image-group {
             width: 100%;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(6, 31vw);
             /* 16px - 20px */
-            gap: clamp(1rem, 1.6vw, 1.25rem);
-        }
-
-        .cs-item {
-            list-style: none;
-            width: 100%;
-            max-width: (500/16rem);
-            border-radius: (8/16rem);
-            position: relative;
-            z-index: 1;
-            transition:
-                box-shadow 0.3s,
-                transform 0.3s;
-
-            &:hover {
-                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-                transform: translateY(-0.4375rem);
-                .cs-picture {
-                    img {
-                        opacity: 0.3;
-                        transform: scale(1.1);
-                    }
-                }
-                .cs-h3 {
-                    color: var(--primaryLight);
-                }
-            }
-
-            &:before {
-                /* border, done in pseudo so it can sit under the picture */
-                content: "";
-                width: 100%;
-                height: 100%;
-                border-radius: (8/16rem);
-                border: 1px solid #e8e8e8;
-                /* prevents border from affecting height and width */
-                box-sizing: border-box;
-                background: transparent;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                z-index: -1;
-            }
-        }
-
-        .cs-link {
-            text-decoration: none;
-            /* 16px - 24px */
-            padding-bottom: clamp(1rem, 2.2vw, 1.5rem);
-            display: block;
+            //gap: clamp(0.5rem, 1.5vw, 1.25rem);
+            gap: clamp(1.5rem, 3vw, 3rem) clamp(1rem, 2vw, 1.5rem);  /* vertical, horiz gap */
         }
 
         .cs-picture {
-            width: 100%;
-            height: (240/16rem);
-            /* 16px - 24px */
-            margin-bottom: clamp(1rem, 2.2vw, 1.5rem);
-            border-radius: (8/16rem) (8/16rem) 0 0;
-            background-color: var(--primaryLight);
-            /* clips the img tag corners */
-            overflow: hidden;
             display: block;
             position: relative;
-            z-index: 10;
+            border-radius: (8/16rem);
+            border-top: 3px solid var(--primary);
+            overflow: hidden;  // keeps img corners clipped
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+            // background-color: var(--primaryLight);  /* this is the orange that shows through */
+            background-color: rgba(255, 140, 0, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
 
-            img {
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+
+                    img {
+                        opacity: 0.3; /* img fades, revealing orange behind it */
+                        transform: scale(1.1);
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: top center;
+                    transition: transform 0.6s, opacity 0.3s;  /* smooth fade */
+                }
+            
+            .v-overlay {
                 position: absolute;
-                top: 0;
+                bottom: 0;
                 left: 0;
-                height: 100%;
                 width: 100%;
-                object-fit: cover;
-                transition:
-                    transform 0.6s,
-                    opacity 0.3s;
+                padding: (16/16rem) (20/16rem);
+                //background: rgba(0, 0, 0, 0.75);
+                background: rgba(20, 10, 0, 0.85);
+                border-left: 3px solid var(--primary); 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                transform: translateY(100%);
+                transition: transform 0.35s ease;
+                z-index: 2;
+
+                .v-overlay-title {
+                    font-size: (18/16rem);
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: (4/16rem);
+                }
+
+                .v-overlay-text {
+                    font-size: (16/16rem);
+                    color: rgba(255, 255, 255, 0.8);
+                }
             }
+
+            &:hover {
+                .v-overlay {
+                    transform: translateY(0);
+                }
+            }
+   
         }
 
-        .cs-h3 {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 3vw, 1.5625rem);
-            line-height: 1.2em;
-            font-weight: 700;
-            color: var(--headerColor);
-            margin: 0 0 (12/16rem) 0;
-            /* 16px - 24px */
-            padding: 0 clamp(1rem, 2vw, 1.5rem);
-            transition: color 0.3s;
+        .cs-picture-1 {
+            grid-column: ~"1 / span 12"; // full width now
+            grid-row: span 1;
         }
 
-        .cs-item-text {
-            /* 14px - 16px  */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            color: var(--bodyTextColor);
-            margin: 0;
-            /* 16px - 24px */
-            padding: 0 clamp(1rem, 2.2vw, 1.5rem);
+        /* pic-2 deleted */
+
+        .cs-picture-3 {
+            grid-column: ~"1 / span 12";
+            grid-row: ~"2 / span 2";
         }
+
+        .cs-picture-4 {
+            grid-column: ~"1 / span 12";
+            grid-row: ~"4 / span 2";
+        }
+
+        .cs-picture-5 {
+            grid-column: ~"1 / span 12"; // full width now
+            grid-row: ~"6 / span 1";
+        }
+
+        /* pic-6 deleted */
     }
 }
 
-/* Tablet - 768px */
+/* Tablet */
 @media only screen and (min-width: 48rem) {
-    #services-341 {
-        .cs-card-group {
+    #gallery-42 {
+        .cs-content {
             flex-direction: row;
+            justify-content: space-between;
+            gap: (48/16rem);
         }
+
+        .cs-flex {
+            min-width: 45%;
+        }
+
+        .cs-image-group {
+            /* 116px - 210px */
+            grid-template-rows: repeat(3, clamp(7.25rem, 16vw, 13.125rem));
+        }
+
+        .cs-picture-1 {
+            grid-column: 1 / span 6;
+            grid-row: 1 / span 1;
+        }
+
+
+        .cs-picture-3 {
+            grid-column: 1 / span 6;
+            grid-row: 2 / span 2;
+        }
+
+        .cs-picture-4 {
+            grid-column: 7 / span 6;
+            grid-row: 1 / span 2;
+        }
+
+        .cs-picture-5 {
+            grid-column: 7 / span 6;
+            grid-row: 3 / span 1;
+        }
+
     }
 }
 
-/* End of Portfolio 3-card section - Services CS 341 */                          
-                                
+
+
 
 /*-- -------------------------- -->
 <--- Title part of AI Timetable CS 1731 -->
@@ -557,14 +598,7 @@
 }
 
 /* End of top part of 1st timetable CS 1731 - just cs-topper, title, button to the right  */
-
-
-/*-- -------------------------- -->
-<---     Table body CS 1669        -->
-<--- -------------------------- -*/
-
-
-/* removed comparison table */
+/* removed comparison table CS 1669 */
                                 
 
 
@@ -889,7 +923,7 @@
 
                         
 /*-- -------------------------- -->
-<---  Pricing - Services CS 264 -->
+<---  Pricing cards - Services CS 264 -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
