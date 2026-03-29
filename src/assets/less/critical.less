@@ -149,10 +149,19 @@
             text-align: left;
             width: 100%;
             /* 32px - 40px */
-            margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+            //margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+            margin: 0 auto clamp(0.6rem, 1.3vw, 0.8rem) 0;
             // color: var(--bodyTextColorWhite);
             color: #dbdbdb;
             position: relative;
+        }
+
+        .v-tagline {
+            font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+            font-weight: 700;
+            color: #dbdbdb;
+            display: block;
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
         }
 
         .cs-text {
