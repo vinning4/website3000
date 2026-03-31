@@ -688,6 +688,7 @@
         //overflow: hidden;
         position: relative;
         z-index: 1;
+        background-color: #f7f7f7;
 
         /* This bit not needed coz blue bg replaced with img bg.
         &:before {
@@ -715,53 +716,6 @@
             gap: clamp(3rem, 6vw, 4rem);
         }
 
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            z-index: -1;
-
-            &:before {
-                /* black overlay */
-                content: "";
-                width: 100%;
-                height: 100%;
-                background: #000;
-                opacity: 0.7;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                z-index: 1;
-            }
-
-            &:after {
-                /* brown overlay replaced with handpicked bg color below */
-                content: "";
-                width: 100%;
-                height: 100%;
-                //background: var(--primaryLight);
-                background: #645a37;
-                opacity: 0.4;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                z-index: 2;
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
 
         .cs-content {
             /* set text align to left if content needs to be left aligned */
@@ -787,16 +741,16 @@
         }
 
         .cs-topper {
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
         }
 
         .cs-title {
             max-width: 20ch;
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
         }
 
         .cs-text {
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
         }
 
         .cs-image-group {
@@ -860,12 +814,12 @@
 
             &:hover {
                 .cs-date, .cs-h3 {
-                    color: var(--secondary);
+                    color: var(--primary);
                 }
 
                 &:before {
-                    background-color: var(--secondary);
-                    border-color: var(--secondary);
+                    background-color: var(--primary);
+                    border-color: var(--primary);
                 }
             }
 
@@ -894,7 +848,7 @@
             line-height: 1.2em;
             font-weight: 700;
             margin: 0 0 (16/16rem) 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
             display: block;
             transition: color .3s;
         }
@@ -907,7 +861,7 @@
             /* changes to 100% at tablet */
             width: 80%;
             margin: 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
             position: relative;
             transition: color .3s;
         }
@@ -917,7 +871,7 @@
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
             margin: (8/16rem) 0 0 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
             text-align:justify;
         }
 
