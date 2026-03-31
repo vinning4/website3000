@@ -6,9 +6,9 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 
-/*-- -------------------------- -->
-<--- Intro to 6 cards - CS 1628 -->
-<--- -------------------------- -*/
+/*-- ------------------------------------------------------ -->
+<--- 'What bizs need' txt - Services CS 1628 intro -->
+<--- ------------------------------------------------------ -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -60,6 +60,12 @@
                 display: block;
                 position: relative;
             }
+
+            /*  // For drop cap 'R' in 'Right now'
+            .v-line1 {
+                font-size: clamp(1.5rem, 2.8vw, 2rem);
+                font-family: 'Great Vibes', cursive;
+            } */
         }
     }
 }
@@ -112,11 +118,78 @@
     }
 }
 
-/* ----- End of CS 1628 top part -----  */
+
+
+/*-- -------------------------- -->
+<---  Why bizs choose W3 - CS CTA 488  -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #cta-488 {
+        height: (300/16rem); /* 300px - narrow banner */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 (16/16rem);
+            box-sizing: border-box;
+            position: relative;
+            z-index: 2; /* sits above overlay */
+        }
+
+        .cs-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 900;
+            color: var(--bodyTextColorWhite);
+            text-align: center;
+            margin: 0;
+            line-height: 1.2em;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+
+            /* dark overlay so white text always readable */
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: rgba(105, 105, 105, 0.6);
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+/* no tablet breakpoint needed - it's just a centered heading */
+
+
 
 
 /*-- ---------------------------------------------------------- -->
-<--- 6 cards features - Services CS 285 without intro part -->
+<--- 6 cards - Services CS 285 w/o intro -->
 <--- ------------------------------------------------------------ -*/
 
 /* Mobile - 360px */
@@ -125,7 +198,7 @@
         /* centers the button */
         text-align: center;
         padding: var(--sectionPadding);
-        padding-top: 0; /* V added to remove gap between txt top & 3 cards */
+        padding-top: (40/16rem);
 
         .cs-container {
             width: 100%;
