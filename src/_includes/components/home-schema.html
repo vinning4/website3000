@@ -29,10 +29,14 @@
         {% if client.socials %}
             "sameAs": [{%- for platform, url in client.socials -%}
                     {% if not loop.first %},{% endif %}"{{ url }}"
-                {%- endfor -%}]
+                {%- endfor -%}],
         {% endif %}
+
+        "priceRange": "From $150/month"
     }
 </script>
+
+
 
 <script type="application/ld+json">
 {
