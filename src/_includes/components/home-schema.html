@@ -1,7 +1,7 @@
 <script type="application/ld+json">
     {
         "@context": "http://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "ProfessionalService",
         "name": "{{ client.name }}",
         {% if preloadImg %}"image": "{{ client.domain }}{{ preloadImg }}",{% endif %}
         {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
@@ -32,4 +32,53 @@
                 {%- endfor -%}]
         {% endif %}
     }
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How does the website subscription work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Think of it like a mobile plan — pay monthly, enjoy full access. For $150/month you get a custom-built website plus hosting, maintenance, edits and SEO improvements. All included, no surprise charges."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why don't you use WordPress?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "I hand-code every site in clean HTML and CSS — no plugins, no databases, no templates. The result is a faster, more secure website that loads in under a second and has no unnecessary complexity."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the minimum subscription length?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The minimum subscription is 12 months. After that it continues month to month with no exit fees and no fine print."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What do your Google PageSpeed scores mean?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PageSpeed Insights is a Google tool that measures website performance. Scores above 90 are considered strong — our sites consistently score 95 to 100, indicating superior optimisation that benefits both user experience and search rankings."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does it take to build my website?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most websites are built and live within four weeks. The timeline depends on how quickly content is provided — after a signed contract, you receive a questionnaire to get things started."
+            }
+        }
+    ]
+}
 </script>

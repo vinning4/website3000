@@ -1,20 +1,19 @@
 module.exports = {
-    name: "Website3000 Web Designer",
+    name: "Website3000",
     email: "hello@website3000.com",
     phoneForTel: "0466340941",
     phoneFormatted: "(+61) 466 340 941",
     address: {
-        lineOne: "",
+        lineOne: "35 Collins St",
         lineTwo: "",
         city: "Melbourne",
         state: "VIC",
         zip: "3000",
         country: "AU",
-        mapLink: "https://maps.app.goo.gl/WdupJmFuAJs84UBn9",
+        mapLink: "https://share.google/3sddD5jorIXGA8W3F",
     },
     socials: {
-        facebook: "https://www.facebook.com/",
-        instagram: "https://www.instagram.com/",
+        instagram: "https://www.instagram.com/realWebsite3000",
     },
     
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
