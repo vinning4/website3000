@@ -347,7 +347,7 @@
             height: auto;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(6, 31vw);
+            grid-template-rows: repeat(4, 55vw);  // 4 equal rows
             /* 16px - 20px */
             //gap: clamp(0.5rem, 1.5vw, 1.25rem);
             gap: clamp(2.5rem, 4vw, 4rem) clamp(1rem, 2vw, 1.5rem);  /* vertical, horiz gap */
@@ -423,27 +423,10 @@
    
         }
 
-        .cs-picture-1 {
-            grid-column: ~"1 / span 12"; // full width now
-            grid-row: span 1;
-        }
-
-        /* pic-2 deleted */
-
-        .cs-picture-3 {
-            grid-column: ~"1 / span 12";
-            grid-row: ~"2 / span 2";
-        }
-
-        .cs-picture-4 {
-            grid-column: ~"1 / span 12";
-            grid-row: ~"4 / span 2";
-        }
-
-        .cs-picture-5 {
-            grid-column: ~"1 / span 12"; // full width now
-            grid-row: ~"6 / span 1";
-        }
+        .cs-picture-1 { grid-column: ~"1 / span 12"; grid-row: 1; } /* pic 2 deleted */
+        .cs-picture-3 { grid-column: ~"1 / span 12"; grid-row: 2; }
+        .cs-picture-4 { grid-column: ~"1 / span 12"; grid-row: 3; }
+        .cs-picture-5 { grid-column: ~"1 / span 12"; grid-row: 4; }
 
         /* pic-6 deleted */
     }
@@ -464,29 +447,13 @@
 
         .cs-image-group {
             /* 116px - 210px */
-            grid-template-rows: repeat(3, clamp(7.25rem, 16vw, 13.125rem));
+            grid-template-rows: repeat(2, clamp(14rem, 24vw, 20rem));
         }
 
-        .cs-picture-1 {
-            grid-column: 1 / span 6;
-            grid-row: 1 / span 1;
-        }
-
-
-        .cs-picture-3 {
-            grid-column: 1 / span 6;
-            grid-row: 2 / span 2;
-        }
-
-        .cs-picture-4 {
-            grid-column: 7 / span 6;
-            grid-row: 1 / span 2;
-        }
-
-        .cs-picture-5 {
-            grid-column: 7 / span 6;
-            grid-row: 3 / span 1;
-        }
+        .cs-picture-1 { grid-column: 1 / span 6; grid-row: 1; }
+        .cs-picture-3 { grid-column: 1 / span 6; grid-row: 2; }
+        .cs-picture-4 { grid-column: 7 / span 6; grid-row: 1; }
+        .cs-picture-5 { grid-column: 7 / span 6; grid-row: 2; }
 
     }
 }
