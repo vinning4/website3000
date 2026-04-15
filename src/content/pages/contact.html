@@ -23,7 +23,7 @@ permalink: "/contact/"
             <span class="cs-topper"></span>
             <h2 class="cs-title">Websites that work as hard as you</h2>
             <p class="cs-text">
-                Service providers thrive on calls, bookings and enquiries. Whether you run a clinic, trades business or other specialist service, your website should load instantly while guiding visitors to reach out.
+                Service providers thrive on calls, bookings and enquiries. Whether you run a clinic,  café, trades business or other specialist service, your website should load instantly while guiding visitors to reach out.
                 <br><br>
                 Ready to build yours? A few details below help get the ball rolling.
             </p>
@@ -69,11 +69,20 @@ permalink: "/contact/"
                 </label>
                 <label class="cs-label">
                     Pricing package preference*
-                    <input class="cs-input" required type="text" id="pricing-569" name="pricing" placeholder="Subscription or One-time payment">
+                    <select class="cs-input v-select" required id="pricing-569" name="pricing">
+                    <option value="" disabled selected>Select a package</option>
+                    <option value="Subscription">Subscription</option>
+                    <option value="One-time payment">One-time payment</option>
+                </select>
                 </label>
                 <label class="cs-label">
                     Add a blog for SEO?
-                    <input class="cs-input" type="text" id="blog-569" name="blog" placeholder="Yes / No / Tell me more">
+                    <select class="cs-input v-select" id="blog-569" name="blog">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Tell me more">Tell me more</option>
+                    </select>
                 </label>
                 <label class="cs-label">
                     Business Name
