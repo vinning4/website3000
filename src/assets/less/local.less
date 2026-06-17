@@ -6,1320 +6,975 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 
-/*-- ------------------------------------------------------ -->
-<--- 'What bizs need' txt - Services CS 1628 intro -->
-<--- ------------------------------------------------------ -*/
+/*-- -------------------------- -->
+<---       2 - Portfolio           -->
+<--- -------------------------- -*/
+
+/* W3v2 MODIFIED */
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #services-1628 {
+    #portfolio {
         padding: var(--sectionPadding);
-        background-color: #f7f7f7;
+        background-color: var(--dark);
+        margin-bottom: 6px; // just enough for the tick to show.
+        position: relative; // for tick divider below this section.
 
-        .cs-container {
-            width: 100%;
-            /* changes to 1280px at tablet */
-            max-width: (550/16em);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-        }
-    
-        .cs-title {
-            max-width: 20ch;
-            font-size: clamp(2rem, 5vw, 2.8rem);  // V added
-        }
-
-        .cs-text {
-            max-width: (640/16rem);
-            position: relative;
-            z-index: 1;
-            text-align: justify;
-
-            &:after {
-                /* divider line */
+            /* square tick divider after this section. */
+            &::after {
                 content: "";
-                width: 100%;
-                height: 1px;
-                margin-top: (24/16rem);
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                right: 0;
+                height: 0.5px;
+                background: var(--primaryBorder);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: clamp(1rem, 4vw, 2rem);
+                width: 5px;
+                height: 5px;
                 background: var(--primary);
-                opacity: 1;
-                display: block;
-                position: relative;
-            }
+            } /* end sq tick divider */
 
-            /*  // For drop cap 'R' in 'Right now'
-            .v-line1 {
-                font-size: clamp(1.5rem, 2.8vw, 2rem);
-                font-family: 'Great Vibes', cursive;
-            } */
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #services-1628 {
         .cs-container {
-            max-width: (1280/16rem);
+            width: 100%;
+            max-width: (1440/16rem);
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (32/16rem);
         }
 
         .cs-content {
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cs-flex {
-            text-align: left;
-            width: 40vw;
-            max-width: (640/16rem);
-            flex: none;
-        }
-
-        .cs-topper {
-            padding-right: (8/16rem);
+            gap: (28/16rem);
         }
 
         .cs-title {
             margin: 0;
-            padding-right: (12/16rem);
+            max-width: 30ch;
         }
 
-        .cs-text {
-            padding: (12/16rem) 0 (12/16rem) (24/16rem);
-
-            &:after {
-                width: 1px;
-                height: 100%;
-                margin: 0 (24/16rem) 0 0;
-                order: -1;
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-        }
-       
-    }
-}
-
-/* Large Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-    #services-1628 {
-        /* Only cs-item was here, V removed */
-    }
-}
-
-
-
-/*-- ---------------------------------------------------------- -->
-<--- 6 cards - Services CS 285 w/o intro -->
-<--- ------------------------------------------------------------ -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #services-285 {
-        /* centers the button */
-        text-align: center;
-        padding: var(--sectionPadding);
-
-        .cs-container {
+        .portfolio-grid {
             width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-       .cs-content {
-            /* set text align left if content must be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally. For left align, set to flex-start. */
-            align-items: center;
-
-            .cs-title {
-                max-width: 60ch;
-            }
-        }
-
-        .cs-card-group {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            flex-direction: column;
-            row-gap: (16/16rem);
-        }
-
-        .cs-item {
-            list-style: none;
-            width: 100%;
-            max-width: (500/16rem);
-            border-radius: (8/16rem);
-            /* 32px - 40px top & bottom */
-            /* 28px - 40px left & right */
-            padding: clamp(2rem, 3vw, 2.5rem) clamp(1.75rem, 3vw, 2.5rem);
-            background-color: #e5e5e5;
-            box-sizing: border-box;
-            transition:
-                background-color 0.3s,
-                transform 0.3s;
-
-            &:hover {
-                background-color: var(--primary);
-                transform: translateY(-0.4375rem);
-
-                .cs-picture {
-                    &:before {
-                        width: 100%;
-                        height: 100%;
-                        opacity: 1;
-                    }
-                }
-
-                .cs-h3,
-                .cs-item-text {
-                    color: #fff;
-                }
-            }
-        }
-
-        .cs-link {
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .cs-picture {
-            margin: 0;
-            margin-bottom: (24/16rem);
-            /* 68px - 88px */
-            width: clamp(4.25rem, 4vw, 5.5rem);
-            height: clamp(4.25rem, 4vw, 5.5rem);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background-color: var(--primary);
-            position: relative;
-            z-index: 1;
-
-            &:before {
-                /* floating hover box */
-                content: "";
-                width: 130%;
-                height: 130%;
-                background-color: transparent;
-                opacity: 0;
-                border-radius: 50%;
-                border: 2px solid #fff;
-                position: absolute;
-                display: block;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                /* prevents the mouse from interacting with it */
-                pointer-events: none;
-                z-index: 10;
-                transition:
-                    width 0.5s,
-                    height 0.5s,
-                    opacity 0.4s;
-            }
-        }
-
-        .cs-icon {
-            /* 45px - 54px */
-            height: clamp(2.8125rem, 3vw, 3.375rem);
-            width: auto;
-        }
-
-        .cs-h3 {
-            font-size: (20/16rem);
-            font-weight: 900;
-            text-align: center;
-            line-height: 1.2em;
-            margin: 0;
-            margin-bottom: (12/16rem);
-            color: var(--headerColor);
-            transition: color 0.3s;
-        }
-
-        .cs-item-text {
-            font-size: (16/16rem);
-            text-align: center;
-            line-height: 1.5em;
-            margin: 0;
-            color: var(--bodyTextColor);
-            transition: color 0.3s;
-        }
-
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #services-285 {
-        .cs-card-group {
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-            /* 16px - 20px */
-            column-gap: clamp(1rem, 2vw, 1.25rem);
-        }
-    }
-}
-
-/* End of CS 285 with 6 cards without top part  */
-
-
-
-/*-- -------------------------- -->
-<--- Portfolio 4 tiles - Gallery mosaic CS 42 (edited from 6 tiles) -->
-<--- -------------------------- -*/
-
-/* Mobile */
-@media only screen and (min-width: 0rem) {
-    #gallery-42 {
-        padding: var(--sectionPadding);
-        background-color: #f7f7f7;
-
-        .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-        }
-
-        .cs-topper {
-            font-size: clamp(1rem, 2vw, 1.1rem);
-        }
-
-        .cs-text {
-            margin-bottom: (16/16rem);
-            max-width: (630/16rem);
-            &:last-of-type {
-                margin-bottom: (32/16rem);
-            }
-        }
-
-
-        .cs-image-group {
-            width: 100%;
-            height: auto;
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(4, 85vw);  // 4 equal rows
-            /* 16px - 20px */
-            //gap: clamp(0.5rem, 1.5vw, 1.25rem);
-            gap: clamp(2.5rem, 4vw, 4rem) clamp(1rem, 2vw, 1.5rem);  /* vertical, horiz gap */
+            grid-template-columns: 1fr;
+            gap: (28/16rem);
         }
 
-        .cs-picture {
-            display: block;
-            position: relative;
-            border-radius: (8/16rem);
-            border-top: 3px solid var(--primary);
-            overflow: hidden;  // keeps img corners clipped
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-            // background-color: var(--primaryLight);  /* this is the orange that shows through */
-            background-color: rgba(255, 140, 0, 0.25);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-
-                &:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-
-                    img {
-                        opacity: 0.3; /* img fades, revealing orange behind it */
-                        transform: scale(1.1);
-                    }
-                }
-
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    object-position: top center;
-                    transition: transform 0.6s, opacity 0.3s;  /* smooth fade */
-                }
-            
-            .v-overlay {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                padding: (16/16rem) (20/16rem);
-                //background: rgba(0, 0, 0, 0.75);
-                background: rgba(20, 10, 0, 0.85);
-                border-left: 3px solid var(--primary); 
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                transform: translateY(100%);
-                transition: transform 0.35s ease;
-                z-index: 2;
-
-                .v-overlay-title {
-                    font-size: (18/16rem);
-                    font-weight: 700;
-                    color: #fff;
-                    margin-bottom: (4/16rem);
-                }
-
-                .v-overlay-text {
-                    font-size: (16/16rem);
-                    color: rgba(255, 255, 255, 0.8);
-                }
-            }
-
-            &:hover {
-                .v-overlay {
-                    transform: translateY(0);
-                }
-            }
-   
-        }
-
-        .cs-picture-1 { grid-column: ~"1 / span 12"; grid-row: 1; } /* pic 2 deleted */
-        .cs-picture-3 { grid-column: ~"1 / span 12"; grid-row: 2; }
-        .cs-picture-4 { grid-column: ~"1 / span 12"; grid-row: 3; }
-        .cs-picture-5 { grid-column: ~"1 / span 12"; grid-row: 4; }
-
-        /* pic-6 deleted */
-    }
-}
-
-/* Tablet */
-@media only screen and (min-width: 48rem) {
-    #gallery-42 {
-        .cs-content {
-            flex-direction: row;
-            justify-content: space-between;
-            gap: (48/16rem);
-        }
-
-        .cs-flex {
-            min-width: 45%;
-        }
-
-        .cs-image-group {
-            /* 116px - 210px */
-            grid-template-rows: repeat(2, clamp(14rem, 24vw, 20rem));
-        }
-
-        .cs-picture-1 { grid-column: 1 / span 6; grid-row: 1; }
-        .cs-picture-3 { grid-column: 1 / span 6; grid-row: 2; }
-        .cs-picture-4 { grid-column: 7 / span 6; grid-row: 1; }
-        .cs-picture-5 { grid-column: 7 / span 6; grid-row: 2; }
-
-    }
-}
-
-
-
-
-/*-- -------------------------- -->
-<--- Title part of AI Timetable CS 1731 -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #timetable-1731 {
-        padding: var(--sectionPadding);
-        //padding-bottom: (24/16rem); /* V: to reduce gap to table body below. But now removed table comparison from homepg. */
-        position: relative;
-        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-
-        .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to center if content needs to be centrally aligned */
-            text-align: left;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* aligns content to the left, set to center to centrally align */
-            align-items: flex-start;
-        }
-
-        .cs-flex-group {   /* V added */
-            /* Limit the width of text content to create space from button on right */
-            max-width: 90%; /* Adjust this percentage as needed */
-            flex: 0 1 auto; /* Don't grow, allow shrinking */
-        }
-
-        .cs-text {
-            text-align: justify;
-        }
-
-        .cs-button-solid {
-            font-size: (16/16rem);
-            font-weight: 700;
-            /* 46px - 56px */
-            /* line-height: clamp(2.875rem, 5.5vw, 3.5rem); */
-            line-height: 1.4;
-            text-align: center;
-            text-decoration: none;
-            min-width: (100/16rem);
-            //max-height: (56/16rem);
-            /* margin: 0; */
-            margin: clamp(1.5rem, 3vw, 2rem) 0 0 0;
-            padding: (12/16rem) (16/16rem); /*V added*/
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            color: #1a1a1a;
-            background-color: #cccccc;
-            display: inline-flex; /* V changed from flex */
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 1;
+        .portfolio-card {
+            background: var(--medium);
+            border: 0.5px solid var(--primaryBorder);
             overflow: hidden;
-            cursor: pointer;
-            white-space: nowrap; /* V added to prevent txt wrap on button */
-
-
-            &:before {
-                content: "";
-                width: 0%;
-                height: 100%;
-                background-color: #1a1a1a;
-                opacity: 1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: width 0.5s;
-            }
-
-            &:hover { 
-                color: #fff;
-
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-       
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #timetable-1731 {
-        .cs-content {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .cs-flex-group {
-            max-width: 70%;
-            //flex: 0 1 auto;
-        }
-
-        .cs-button-solid { /* V added */
-            margin-top: 0; /* Remove top margin on tablet+ */
-            align-self: center; /* Align with the center of flex container, used instead of flex-start */
-        }
-    }
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #timetable-1731 {
-        /* Only cs-table-list here, V removed. */
-    }
-}
-
-/* End of top part of 1st timetable CS 1731 - just cs-topper, title, button to the right  */
-/* removed comparison table CS 1669 */
-                                
-
-
-/*-- -------------------------- -->
-<--- How it works - CS 1517 Timeline  -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #timeline-1517 {
-        /* 60px - 140px */
-        padding: clamp(3.75rem, 7.82vw, 8.75rem) (16/16rem);
-        /* clips the white line through the bullets */
-        //overflow: hidden;
-        position: relative;
-        z-index: 1;
-        background-color: #f7f7f7;
-
-        /* This bit not needed coz blue bg replaced with img bg.
-        &:before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            //background-color: #20293a;
-            // below line prevents the mouse from interacting with it.
-            pointer-events: none;
-            position: absolute;
-            display: block;
-            top: 0;
-            left: 0;
-        } */
-
-        .cs-container {
-            width: 100%;
-            /* changes to 1280px at tablet */
-            max-width: (550/16rem);
-            margin: auto;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
         }
 
 
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
+        .portfolio-img-wrap {
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-            /* 20px - 40px */
-            gap: clamp(1.25rem, 4vw, 2.5rem);
-            position: relative;
-        }
-
-        .cs-flex {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-topper {
-            color: var(--bodyTextColor);
-        }
-
-        .cs-title {
-            max-width: 20ch;
-            color: var(--bodyTextColor);
-        }
-
-        .cs-text {
-            color: var(--bodyTextColor);
-        }
-
-        .cs-image-group {
-            width: 100%;
-            max-width: (420/16rem);
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: (8/16rem);
-        }
-
-        .cs-picture {
-            width: 100%;
+            aspect-ratio: 400 / 600; //match mob screenshot.
             height: auto;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
+            display: block;
             position: relative;
-            z-index: 1;
+            overflow: hidden;
+            border-bottom: 0.5px solid var(--primaryBorder);
+            text-decoration: none;
 
             img {
                 width: 100%;
-                height: auto;
-            }
-        }
-
-        .cs-card-group {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            /* changes at tablet */
-            gap: (24/16rem);
-            position: relative;
-            
-            &:before {
-                /* line through the bullets */
-                content: "";
-                width: 2px;
-                background: #E8E8E8;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 0;
-                /* send it way down to reach the bottom of the section, and have some overlap so if you add content and the ul gets longer, it will still be at the bottom */
-                //bottom: (-48/16rem); /* V changed from (-300/16rem) */
                 height: 100%;
-                /* half the width of the bullet */
-                left: (9/16rem);
+                object-fit: cover;
+                object-position: top center;
+                display: block;
+                transition: transform 0.4s ease;
             }
-        }
-
-        .cs-item {
-            width: 100%;
-            max-width: (300/16rem);
-            list-style: none;
-            padding: 0 0 0 (44/16rem);
-            grid-column: span 12;
-            position: relative;
 
             &:hover {
-                .cs-date, .cs-h3 {
-                    color: var(--primary);
+                img {
+                    transform: scale(1.02);
                 }
-
-                &:before {
-                    background-color: var(--primary);
-                    border-color: var(--primary);
-                }
-            }
-
-            &:before {
-                /* bullet circle */
-                content: "";
-                width: (20/16rem);
-                height: (20/16rem);
-                background: #FFF8F5;
-                border: 2px solid #bababa;
-                /* prevents border from affecting height and width */
-                box-sizing: border-box;
-                border-radius: 50%;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                z-index: 1;
-                transition: background-color .3s, border-color .3s;
             }
         }
 
-        .cs-date {
+        .portfolio-live-label {
+            position: absolute;
+            top: (8/16rem);
+            right: (8/16rem);
+            font-family: var(--monoFont);
+            font-size: (12/16rem);
+            letter-spacing: 0.08em;
+            color: var(--primary);
+            background: #070a0ccc;
+            padding: (3/16rem) (7/16rem);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        a.portfolio-card-bar {
+            padding: (12/16rem) (8/16rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: (8/16rem);
+            text-decoration: none;
+            border-top: 0.5px solid var(--primaryBorder);
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #000;
+            }
+        }
+
+        .portfolio-card-visit {
+            display:none;
+        }
+
+        .portfolio-card-info {
+            display: flex;
+            flex-direction: column;
+            gap: (3/16rem);
+        }
+
+        .portfolio-card-name {
+            font-family: var(--headerFont);
             font-size: (16/16rem);
-            line-height: 1.2em;
             font-weight: 700;
-            margin: 0 0 (16/16rem) 0;
-            color: var(--bodyTextColor);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--headerColor);
+        }
+
+        .portfolio-card-meta {
+            font-family: var(--monoFont);
+            font-size: (12/16rem);
+            letter-spacing: 0.08em;
+            color: #4a6670;
+            text-transform: uppercase;
+        }
+
+        .portfolio-card-score {
+            font-family: var(--monoFont);
+            font-size: (13/16rem);
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+    }
+}
+
+
+/* Switch to landscape ratio at same point as picture source — 600px */
+@media only screen and (min-width: 37.5rem) {
+    #portfolio {
+        .portfolio-img-wrap {
+            aspect-ratio: 1440 / 820;
+        }
+
+        .portfolio-card-visit {
             display: block;
-            transition: color .3s;
+            font-family: var(--monoFont);
+            font-size: (14/16rem);
+            letter-spacing: 0.08em;
+            color: var(--primary);
+            opacity: 0.6;
+            text-align: center;
+            flex: 1; /* takes up middle space between name and score */
+            transition: opacity 0.3s;
+
+            a.portfolio-card-bar:hover & {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #portfolio {
+
+        .cs-content {
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
         }
 
-        .cs-h3 {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
-            line-height: 1.2em;
+        .portfolio-grid {
+            grid-template-columns: 1fr 1fr;
+            max-width: 90%;
+            margin: 0 auto;
+            gap: (36/16rem);
+        }
+
+        .portfolio-img-wrap {
+
+            img {
+                object-position: top center; // restore centering at tablet and above
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    #portfolio {
+        .portfolio-grid {
+            max-width: 90%;
+            gap: (52/16rem);
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---  3 - What Makes This Diff  -->
+<--- -------------------------- -*/
+
+/* W3v2 MODIFIED */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #difference {
+        padding: var(--sectionPadding);
+        background-color: var(--dark);
+        margin-bottom: 6px; // just enough for the tick to show.
+        position: relative; // for tick divider.
+
+            // tick divider at bottom
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                right: 0;
+                height: 0.5px;
+                background: var(--primaryBorder);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: clamp(1rem, 4vw, 2rem);
+                width: 5px;
+                height: 5px;
+                background: var(--primary);
+            }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1440/16rem);
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+            display: flex;
+            flex-direction: column;
+            gap: (28/16rem);
+        }
+
+        .cs-content {
+            gap: (8/16rem);
+        }
+
+        .cs-text {
+            max-width: 62ch;
+
+            strong {
+                color: var(--headerColor);
+                font-weight: 600;
+            }
+        }
+
+        .diff-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: (20/16rem);
+        }
+
+        .diff-item {
+            border-left: 1.5px solid var(--primary);
+            padding: (2/16rem) 0 (2/16rem) (16/16rem);
+            display: flex;
+            flex-direction: column;
+            gap: (6/16rem);
+        }
+
+        .diff-item-h {
+            font-family: var(--headerFont);
+            font-size: (16/16rem);
             font-weight: 700;
-            /* changes to 100% at tablet */
-            width: 80%;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--headerColor);
             margin: 0;
-            color: var(--bodyTextColor);
-            position: relative;
-            transition: color .3s;
         }
 
-        .cs-item-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            margin: (8/16rem) 0 0 0;
+        .diff-item-p {
+            font-size: (14/16rem);
             color: var(--bodyTextColor);
-            text-align:justify;
+            line-height: 1.65em;
+            margin: 0;
         }
-
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #timeline-1517 {
-        .cs-container {
-            max-width: (1280/16rem);
-        }
-
-        .cs-card-group {
-            /* clips the lines */
-            overflow: hidden;
-            flex-direction: row;
-            /* 16px - 20px */
-            gap: clamp(1rem, 1.5vw, 1.25rem);
-            row-gap: (48/16rem);
-
-            &:before {
-                display: none;
-            }
-        }
-
-        .cs-item {
-            padding: (50/16rem) 0 0 0;
-            grid-column: span 3;
-
-            &:after {
-                /* moved the line to the list item so we can have multiple rows */
-                content: "";
-                width: 110%;
-                height: 2px;
-                background: #E8E8E8;
-                /* prevents border from affecting height and width */
-                box-sizing: border-box;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: (9/16rem);
-                left: 0;
-                transition: background-color .3s, border-color .3s;
-            }
-        }
-
-        .cs-h3 {
-            width: 100%;
+    #difference {
+        .diff-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: (24/16rem) (48/16rem);
         }
     }
+}
+
+
+
+/*-- -------------------------- -->
+<---       4 - How It Works      -->
+<--- -------------------------- -*/
+
+/* W3v2 MODIFIED */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #how-it-works {
+        padding: var(--sectionPadding);
+        background-color: var(--dark);
+        position: relative;
+        margin-bottom: 6px; // for tick after section. 
+
+            &::after { // tick divider.
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                right: 0;
+                height: 0.5px;
+                background: var(--primaryBorder);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: clamp(1rem, 4vw, 2rem);
+                width: 5px;
+                height: 5px;
+                background: var(--primary);
+            }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1440/16rem);
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+            display: flex;
+            flex-direction: column;
+            gap: (28/16rem);
+        }
+
+        .hiw-grid {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: (28/16rem);
+        }
+
+        .hiw-step {
+            display: flex;
+            flex-direction: column;
+            gap: (14/16rem);
+            padding-top: (16/16rem);
+            border-top: 0.5px solid var(--primaryBorder);
+        }
+
+        .hiw-num {
+            font-family: var(--monoFont);
+            font-size: (14/16rem);
+            letter-spacing: 0.2em;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .hiw-h {
+            font-family: var(--headerFont);
+            font-size: (18/16rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--headerColor);
+            margin: 0;
+        }
+
+        .hiw-p {
+            font-size: (15/16rem);
+            color: var(--bodyTextColor);
+            line-height: 1.7em;
+            margin: 0;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #how-it-works {
+        .hiw-grid {
+            flex-direction: row;
+            gap: 0;
+        }
+
+        .hiw-step {
+            flex: 1;
+            padding-top: (16/16rem);
+            padding-right: clamp(1.5rem, 3vw, 2.5rem);
+            border-top: none;
+            border-right: 0.5px solid var(--primaryDim);
+
+            &:last-child {
+                border-right: none;
+                padding-right: 0;
+                padding-left: clamp(1.5rem, 3vw, 2.5rem);
+            }
+
+            &:nth-child(2) {
+                padding-left: clamp(1.5rem, 3vw, 2.5rem);
+            }
+        }
+    }
+}
+
+
+
+/*-- -------------------------- -->
+<---         5 - Pricing        -->
+<--- -------------------------- -*/
+/* W3v2 MODIFIED */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #pricing {
+    padding: var(--sectionPadding);
+    background-color: var(--dark);
+    position: relative;
+    margin-bottom: 6px; // for tick divider.
+
+        &::after { // tick divider.
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 0.5px;
+            background: var(--primaryBorder);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: clamp(1rem, 4vw, 2rem);
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+        }
+
+    .cs-container {
+      width: 100%;
+      max-width: (1440/16rem);
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+      display: flex;
+      flex-direction: column;
+      gap: (40/16rem);
+    }
+
+
+    .pricing-headline {
+        font-family: var(--headerFont);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        color: var(--headerColor);
+        line-height: 1.1;
+        margin-top: (20/16rem);
+    }
+
+    .pricing-intro {
+        font-size: (15/16rem);
+        color: var(--bodyTextColor);
+        line-height: 1.7em;
+        margin: 0;
+    }
+
+    .pricing-grid {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: (16/16rem);
+    }
+
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      gap: (20/16rem);
+      padding: clamp(1.5rem, 4vw, 2rem);
+      border: 0.5px solid var(--primaryBorder);
+      position: relative;
+
+      // Featured card gets the accent left border
+      &--featured {
+        border-left: 1.5px solid var(--primary);
+      }
+    }
+
+    .pricing-label {
+      font-family: var(--monoFont);
+      font-size: (14/16rem);
+      letter-spacing: 0.2em;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .pricing-price {
+      display: flex;
+      flex-direction: column;
+      gap: (10/16rem);
+    }
+
+    .pricing-amount {
+      font-family: var(--headerFont);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--headerColor);
+      line-height: 1;
+    }
+
+    .pricing-sub {
+      font-family: var(--monoFont);
+      font-size: (14/16rem);
+      letter-spacing: 0.15em;
+      color: var(--bodyTextColorWhite);
+      opacity: 0.45;
+      text-transform: lowercase;
+    }
+
+    .pricing-desc {
+      font-size: (15/16rem);
+      color: var(--bodyTextColor);
+      line-height: 1.7em;
+      margin: 0;
+      padding-bottom: (20/16rem);
+      border-bottom: 0.5px solid var(--primaryBorder);
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: (12/16rem);
+
+      li {
+        font-size: (14/16rem);
+        color: var(--bodyTextColor);
+        padding-left: (20/16rem);
+        position: relative;
+        line-height: 1.5em;
+
+        &::before {
+          content: "—";
+          position: absolute;
+          left: 0;
+          color: var(--primary);
+        }
+      }
+    }
+
+    // Button sits at bottom, full width on mobile
+    .cs-button-solid,
+    .cs-button-ghost {
+      width: 100%;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .pricing-nudge {
+      font-size: (14/16rem);
+      color: var(--bodyTextColor);
+      opacity: 0.7;
+      margin: 0;
+      text-align: center;
+      line-height: 1.6em;
+    }
+
+    .pricing-nudge-link {
+      color: var(--primary);
+      text-decoration: none;
+      opacity: 1;
+      font-family: var(--monoFont);
+      font-size: (14/16rem);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      margin-left: (2/16rem);
+      transition: color 0.3s, letter-spacing 0.3s;
+
+        &:hover {
+            color: var(--headerColor);
+            letter-spacing: 0.04em;
+            text-decoration: none;
+        }
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing {
+    .pricing-grid {
+      flex-direction: row;
+      align-items: stretch;
+      gap: (16/16rem);
+    }
+
+    .pricing-card {
+      flex: 1;
+    }
+
+    .cs-button-solid,
+    .cs-button-ghost {
+      width: 100%;
+    }
+
+    .pricing-nudge {
+      text-align: left;
+    }
+  }
 }
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #timeline-1517 {
-        .cs-content {
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: space-between;
-        }
-
-        .cs-flex {
-            text-align: left;
-            align-items: flex-start;
-        }
+  #pricing {
+    .pricing-amount {
+      font-size: (50/16rem);
     }
+  }
 }
 
-/* Larger Desktop - 1600px */
-@media only screen and (min-width: 100rem) {
-    #timeline-1517 {
-        /* nothing here now */
-    }
-}
 
-                        
+
 /*-- -------------------------- -->
-<---  Pricing cards - Services CS 264 -->
+<---     6 - Mini About         -->
 <--- -------------------------- -*/
+/* W3v2 MODIFIED */
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #services-264 {
+    #about {
         padding: var(--sectionPadding);
+        background-color: var(--dark);
+        position: relative;
+        margin-bottom: 6px; // for tick divider
+
+            &::after { // tick divider line
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                right: 0;
+                height: 0.5px;
+                background: var(--primaryBorder);
+            }
+
+            &::before { // tick divider square
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: clamp(1rem, 4vw, 2rem);
+                width: 5px;
+                height: 5px;
+                background: var(--primary);
+            }
 
         .cs-container {
             width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-        }
-
-        .cs-text {
-            margin-bottom: (16/16rem);
-            &:last-of-type {
-                margin-bottom: (32/16rem);
-            }
-        }
-
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
+            max-width: (1440/16rem);
+            margin: 0 auto;
             box-sizing: border-box;
-            transition: color 0.3s;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                color: #fff;
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-
-        .cs-card-group {
-            width: 100%;
-            padding: 0;
-            margin: 0;
+            padding: 0 clamp(1rem, 4vw, 2rem);
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            gap: (8/16rem);
+            gap: (32/16rem);
         }
 
-        .cs-item {
-            list-style: none;
-            position: relative;
-            display: block;
-            width: 100%;
-            height: auto; /* was 60vw */
-            background-color: #eff7fd; /* V added */
-            border: 1px solid #999999; /* V added */
-            border-radius: (8/16rem); /* V added */
-            /* max-height: (250/16rem);  */
-            font-size: clamp(1rem, 1.7vw, 1.5rem);
+        // cs-topper, cs-title, cs-text inherit from root.less globals
 
-            /* 16px - 20px top & bottom */
-            /* 20px - 24px left & right */
-            padding: clamp(1rem, 2vw, 1.25rem) clamp(1.25rem, 2vw, 1.5rem);
-            /* padding: clamp(1rem, 2.5vw, 1.5rem); << Add this if sth breaks with above padding */
+        .about-layout {
+            display: flex;
+            flex-direction: column;
+            gap: (32/16rem);
+        }
 
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            transition: 
-                box-shadow 0.3s,
-                transform 0.3s;
-            
-            &:last-of-type {
-                background-color: #e5e5e5;
+        .about-text-col {
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+
+            // Override cs-title bottom margin inside this col
+            .cs-title {
+                margin-bottom: (8/16rem);
             }
         }
 
-        .cs-h3 {
-            /* 16px - 25px */
-            font-size: clamp(1rem, 2vw, 1.5625rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            margin: 0;
-            color: #000;
-            display: block;
+        .about-location {
+            font-size: (14/16rem);
+            color: var(--bodyTextColor);
+            opacity: 0.5;
+            margin-top: (4/16rem);
         }
 
-        .cs-price {
-            font-size: clamp(1.25rem, 3vw, 1.75rem);
-            font-weight: 700;
-            color: #6b717b;
-            //text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            margin: (8/16rem) 0 (16/16rem) 0;
+        .about-panel {
+            background-color: var(--primaryBorder);
+            border: 0.5px solid var(--primaryDim);
+            padding: (20/16rem);
+            display: flex;
+            flex-direction: column;
+            gap: (14/16rem);
         }
 
-        .cs-features {
+        .about-panel-tag {
+            font-family: var(--monoFont);
+            font-size: (14/16rem);
+            color: var(--primary);
+            opacity: 0.5;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .about-stat-list {
             list-style: none;
             padding: 0;
             margin: 0;
-            
-            li {
-                color: #000;
-                padding: auto 0;
-                /* font color not needed, seems to inherit */
-                font-size: clamp(0.9rem, 1.5vw, 1rem);
-                line-height: 1.8;
-                
-                &:before {
-                    content: "";
-                    margin-right: (4/16rem);
-                }
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about-stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: (16/16rem);
+            padding: (10/16rem) 0;
+            border-bottom: 0.5px solid var(--primaryBorder);
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
             }
         }
-      
+
+        .about-stat-label {
+            font-size: (13/16rem);
+            color: var(--bodyTextColor);
+            line-height: 1.4em;
+        }
+
+        .about-stat-value {
+            font-family: var(--monoFont);
+            font-size: (14/16rem);
+            color: var(--primary);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #services-264 {
-        .cs-container {
-            flex-direction: row;
-            //padding-right: var(--sectionPadding);
-        }
-
-        .cs-title {
-            white-space: nowrap; /* V added to keep cs-title sentences to one line each */
-        }
-
-        .cs-content {    /* V added so that cs-card-group can get 65% width */
-            width: 28%;    
-        }
-
-        .cs-card-group {
-            width: 65%;  /* V: max allowed before right padding disappears */
-            max-width: (867/16rem);
-            flex-direction: row;
-            justify-content: space-between;
-            /* 16px - 20px */
-            gap: clamp(1rem, 1.5vw, 1.25rem);
-            flex: none;
-        }
-
-        .cs-item {
-            width: 100%;
-            height: auto; /* was 50vw*/
-            max-width: (275/16rem);
-            max-height: (600/16rem);
-            min-height: (400/16rem);
-
-            &:hover {
-                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-                transform: translateY(-0.5rem);
-            }
-        }
+  #about {
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: (40/16rem);
+      align-items: center;
     }
+  }
 }
 
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #about {
+    .about-layout {
+      gap: (64/16rem);
+    }
+    .about-panel {
+      padding: (32/16rem);
+    }
+  }
+}
+
+
+
 /*-- -------------------------- -->
-<---     FAQ CS 254      -->
+<---           7 - FAQ          -->
 <--- -------------------------- -*/
+/* W3v2 MODIFIED */
 
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-    #faq-254 {
+@media only screen and (min-width: 0rem) {
+    #faq {
         padding: var(--sectionPadding);
-        background: #f7f7f7;
+        background-color: var(--dark);
+        position: relative;
+        //margin-bottom: 6px; // tick divider gap removed to blend with CTA top border.
+
+        &::after { // tick divider line
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 0.5px;
+            background: var(--primaryBorder);
+        }
+
+        &::before { // tick divider square
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: clamp(1rem, 4vw, 2rem);
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+        }
 
         .cs-container {
             width: 100%;
-            /* changes to 1280px at tablet */
-            max-width: (550/16rem);
-            margin: auto;
+            max-width: (1440/16rem);
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 0 clamp(1rem, 4vw, 2rem);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+            gap: (32/16rem);
         }
 
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-faq-group {
+        .faq-list {
+            list-style: none;
             padding: 0;
             margin: 0;
-            margin-bottom: (48/16rem);
+            display: flex;
+            flex-direction: column;
         }
 
-        .cs-faq-item {
-            list-style: none;
-            border-bottom: 1px solid #dad9e3;
-            transition: border-bottom 0.3s;
+        .faq-item {
+            display: flex;
+            flex-direction: column;
+            gap: (8/16rem);
+            padding: (20/16rem) 0;
+            border-bottom: 0.5px solid var(--primaryBorder);
+            border-left: 1.5px solid transparent;
+            padding-left: (16/16rem);
+            transition: border-left-color 0.25s ease;
 
-            &.active {
-                border-bottom: 1px solid var(--primary);
-                .cs-button {
-                    &:before {
-                        transform: rotate(180deg);
-                    }
-                    &:after {
-                        opacity: 0;
-                        transform: rotate(360deg);
-                    }
-                }
-                .cs-item-p {
-                    height: auto;
-                    /* 12px - 16px */
-                    margin-bottom: clamp(0.75rem, 1.3vw, 1rem);
-                    opacity: 1;
-                    text-align: justify;
-                }
+            &:first-child {
+                border-top: 0.5px solid var(--primaryBorder);
             }
-        }
-
-        .cs-button {
-            /* 16px - 20px */
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            line-height: 1.2em;
-            text-align: left;
-            font-weight: bold;
-            /* 12px - 16px */
-            padding: clamp(0.75rem, 1.3vw, 1rem) 0;
-            background: transparent;
-            border: none;
-            color: var(--headerColor);
-            display: block;
-            width: 100%;
-            position: relative;
 
             &:hover {
-                cursor: pointer;
-            }
-
-            &:before {
-                /* plus sign */
-                content: "";
-                width: (12/16rem);
-                height: (2/16rem);
-                background: var(--headerColor);
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 50%;
-                right: (4/16rem);
-                transition: transform 0.3s;
-            }
-
-            &:after {
-                /* plus sign */
-                content: "";
-                width: (12/16rem);
-                height: (2/16rem);
-                background: var(--headerColor);
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 50%;
-                right: (4/16rem);
-                transform: rotate(90deg);
-                transform-origin: center;
-                transition:
-                    opacity 0.5s,
-                    transform 0.3s;
+                border-left-color: var(--primary);
             }
         }
 
-        .cs-item-p {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            width: 90%;
-            height: 0;
-            margin: 0;
-            opacity: 0;
+        .faq-q {
+            font-family: var(--bodyFont);
+            font-size: (15/16rem);
+            font-weight: 400;
+            text-transform: uppercase;
+            color: var(--headerColor);
+            line-height: 1.4em;
+        }
+
+        .faq-a {
+            font-size: (15/16rem);
             color: var(--bodyTextColor);
-            /* clips the text so it doesn't show up */
-            overflow: hidden;
-            transition:
-                opacity 0.3s,
-                margin-bottom 0.3s;
+            line-height: 1.75em;
         }
 
-        .cs-cta {
-            text-align: center;
-            /* 48px - 64px top & bottom */
-            /* 40px - 56px left & right */
-            padding: clamp(3rem, 4.9vw, 4rem) clamp(2.5rem, 4vw, 3.5rem);
-            background: #e7f1ff;
-            border: 1px solid #9d9d9d;
-            border-radius: (16/16rem);
-            /* prevents padding from adding to width and height */
-            box-sizing: border-box;
+        .faq-more {
+            font-size: (15/16rem);
+            color: var(--bodyTextColorWhite);
+            opacity: 0.7;
         }
 
-        .cs-h3 {
-            /* 25px - 31px */
-            font-size: clamp(1.5625rem, 3vw, 1.9375rem);
-            line-height: 1.2em;
-            font-weight: bold;
-            text-align: center;
-            margin: 0;
-            margin-bottom: (16/16rem);
-            color: var(--headerColor);
-        }
-
-        .cs-cta-p {
-            /* 16px - 20px */
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            text-align: center;
-            line-height: 1.5em;
-            margin: 0;
-            /* 32px - 48px */
-            margin-bottom: clamp(2rem, 3.9vw, 3rem);
-        }
-
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        .faq-more-link {
+            font-family: var(--monoFont);
+            font-size: (15/16rem);
+            color: var(--primaryLight);
             text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
+            letter-spacing: 0.01em;
+            opacity: 1;
+            margin-left: (2/16rem);
+            transition: color 0.3s, letter-spacing 0.3s;
 
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
+                &:hover {
+                    color: var(--headerColor);
+                    letter-spacing: 0.05em;
+                    text-decoration: none;
                 }
-            }
         }
     }
 }
 
 /* Tablet - 768px */
-@media only screen and (min-width: 48em) {
-    #faq-254 {
-        .cs-container {
-            max-width: (1080/16rem);
+@media only screen and (min-width: 48rem) {
+    #faq {
+        .faq-item {
+            padding: (24/16rem) 0 (24/16rem) (20/16rem);
         }
 
-        .cs-flex-group {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            /* 16px - 48px */
-            gap: clamp(1rem, 3.5vw, 3rem);
-        }
-
-        .cs-faq-group {
-            margin: 0;
-        }
-
-        .cs-cta {
-            width: 38.5%;
-            max-width: (413/16rem);
-            /* prevents flexbox from squishing it */
-            flex: none;
+        .faq-q {
+            font-size: (16/16rem);
         }
     }
 }
 
-/*  End of FAQ section  */
+
+
+
+/* old below, V modified */
 
 
 /*-- -------------------------- -->
 <---     CTA - CS 697            -->
 <--- -------------------------- -*/
 
+/* W3v2 MODIFIED */
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #cta-697 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: var(--primaryBorder);
         position: relative;
         z-index: 1;
-        /* Adding css (less) texture instead of orig CS svg bg img */
-        background-image: repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 30px,
-            rgba(255, 255, 255, 0.04) 30px,
-            rgba(255, 255, 255, 0.04) 40px
-            );
 
         .cs-container {
             width: 100%;
@@ -1341,54 +996,21 @@
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
             /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+            gap: clamp(1.5rem, 4vw, 2.2rem);
         }
 
         .cs-title {
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
+            font-size: clamp(1.6rem, 3.3vw, 2.875rem); // reduced from --headerFont.
         }
 
+        /* button sizing from hero context */
         .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
             line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
+            height: clamp(2.875rem, 5.5vw, 3.5rem);
             margin: 0;
-            // color: var(--bodyTextColorWhite);
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #fff;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                color: #000;
-                &:before {
-                    width: 100%;
-                }
-            }
         }
+
     }
 }
 

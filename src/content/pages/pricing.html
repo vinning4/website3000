@@ -1,90 +1,128 @@
 ---
 title: "Pricing | $150/month Website Design - No Upfront Costs | Website3000"
-description: "Transparent pricing for hand-coded websites. $150/month subscription ($0 upfront) or $3,000 one-time. Includes hosting, edits, and 95-100/100 Google scores."
+description: "Transparent pricing for hand-coded websites. $150/month subscription or $3,000 one-time. Includes hosting, edits, and 95-100/100 Google PageSpeed scores. No quotes, no surprises."
 permalink: "/pricing/"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    
     <link rel="stylesheet" href="/assets/css/pricing.css">
 {% endblock %}
 
 {% block body %}
 
 
+
 <!-- ============================================ -->
-<!--       Pricing CS 264                    -->
+<!--       Pricing cards (sec 5 from homepg)      -->
 <!-- ============================================ -->
 
-<section id="services-264">
+<section id="pricing">
     <div class="cs-container">
+
         <div class="cs-content">
-            <span class="cs-topper"></span>
-            <h2 class="cs-title">SIMPLE PRICING.<br>TWO OPTIONS.<br>NO STRESS.</h2>
-            <p class="cs-text">
-                If you're here, you're probably looking for a path to a good online presence without the complexity and cost stress. <strong>You're in the right place.</strong>
-                <br><br>
-                No tech expertise needed. It's all managed for you. Also no quotes, no fine print — the pricing cards here show exactly what to expect.
-                <br><br>
-                The hand-coded build takes about 4 weeks, after which your new custom website will be open for business. Text me directly for any questions or edits.
+            <span class="cs-topper">// Pricing</span>
+            <div class="pricing-headline">
+                Two Options. One Standard.
+            </div>
+            <p class="pricing-intro">No fine print, no sticker shock — both paths below meet the same standard. Explained in plain English, with no technical knowledge required on your end.
             </p>
-            <a href="/contact/#contact-569" class="cs-button-solid">Start My Website</a>
+            <p class="pricing-intro">Following a meticulous, hand-coded development and testing process that takes around <span style="color: var(--primary);">four weeks</span>, your new website goes live: engineered to load fast, Google-optimised, and primed to capture new enquiries.
+            </p>
         </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <h3 class="cs-h3">Monthly Subscription</h3>
-                <div class="cs-price">$0 down<br>$150/month</div>
-                <ul class="cs-features">
-                    <li>&#x2705; Up to 5-page website</li>
-                    <li>&#x2705; Ongoing maintenance</li>
-                    <li>&#x2705; Hosting + Edits</li>
-                    <li>&#x2705; Direct access to Vin (Hi that's me)</li>
-                    <li>&#x2705; On-page SEO</li>
-                    <li>&#x2705; 95–100 Google PSI scores</li>
+
+        <div class="pricing-grid">
+
+            <!-- Card 1: Monthly -->
+            <div class="pricing-card pricing-card--featured">
+                <span class="pricing-label">Monthly Subscription</span>
+                <div class="pricing-price">
+                    <span class="pricing-amount">$150</span>
+                    <span class="pricing-sub">per month &#9642; 12-month min &#9642; no lock-in after</span>
+                </div>
+                <p class="pricing-desc">Built, launched, and fully managed — one point of contact, no setup fee, no technical knowledge required.</p>
+                <ul class="pricing-features">
+                    <li>Up to 5 pages, hand-coded</li>
+                    <li>Includes content updates — just send a message</li>
+                    <li>Hosting and security included</li>
+                    <li>On-page SEO with ongoing updates as your business grows</li>
+                    <li>Direct access to your developer — no handoffs</li>
+                    <li>95-100 Google PageSpeed score, maintained</li>
+                    <li>Monthly check-ins and proactive site monitoring</li>
                 </ul>
-            </li>
-            <li class="cs-item">
-                <h3 class="cs-h3">One-Time Purchase</h3>
-                <div class="cs-price">$3,000</div>
-                <ul class="cs-features">
-                    <li>&#x2705; Up to 5-page website</li>
-                    <li>&#x2705; Host anywhere</li>
-                    <li>&#x2705; All source code files</li>
-                    <li>&#x2705; On-page SEO</li>
-                    <li>&#x2705; 95–100 Google PSI scores</li>
-                    <li>&#128683; No ongoing support</li>
+                <a href="/contact/" class="cs-button-solid"><span>Get Started</span></a>
+            </div>
+
+            <!-- Card 2: Once-off -->
+            <div class="pricing-card">
+                <span class="pricing-label">One-Time Purchase</span>
+                <div class="pricing-price">
+                    <span class="pricing-amount">$3,000</span>
+                    <span class="pricing-sub">single payment</span>
+                </div>
+                <p class="pricing-desc">
+                    Built and deployed for handover — you'll just need to manage any future changes and technical upkeep.</p>
+                <ul class="pricing-features">
+                    <li>Up to 5 pages, hand-coded</li>
+                    <li>Full source code — HTML, CSS, all assets</li>
+                    <li>Connection to your existing domain</li>
+                    <li>On-page SEO included at launch</li>
+                    <li>95-100 Google PageSpeed score at handover</li>
                 </ul>
-            </li>
-            <li class="cs-item">
-                <h3 class="cs-h3">Power-ups</h3>
-                <div class="cs-price"></div>
-                <ul class="cs-features">
-                    <li>&#x2705; Additional webpages: $100 each/once</li>
-                    <li>&#x2705; Blog setup: $200/once</li>
-                    <li>&#x2705; Blog posts 2–4/month: $100/month</li>
-                </ul>
-            </li>
-        </ul>
+                <a href="/contact/" class="cs-button-ghost">Get Started</a>
+            </div>
+
+        </div>
+
+        <!-- Bigger sites nudge -->
+        <p class="pricing-nudge">
+            Need more than 5 pages? Similar fixed pricing available.
+            <a href="/contact/" class="pricing-nudge-link">Send a quick note &#10132;</a>
+        </p>
+        <p class="pricing-nudge">
+            Questions about the subscription or cancellation?
+            <a href="/why-it-works/#faq" class="pricing-nudge-link">See all FAQs &#10132;</a>
+        </p>
+
     </div>
 </section>
 
 
 <!-- ============================================ -->
-<!--        CTA - banner CS 697                  -->
+<!--           Larger Projects                    -->
+<!-- ============================================ -->
+
+<section id="larger-projects">
+    <div class="cs-container">
+
+        <div class="cs-content">
+            <span class="cs-topper">// Larger Projects</span>
+            <p class="lp-text">
+                Larger builds (6–15 pages) are welcome! Pricing reflects the added complexity that comes with higher page count.
+            </p>
+            <ul class="lp-list">
+                <li>Monthly: $200–$400/month, depending on scope</li>
+                <li>One-off: from $5,000</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--    CTA - banner CS 697 - homepg sec 8, modified as W3v2 -->
 <!-- ============================================ -->
 
 <section id="cta-697">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">Let's build something.</h2>
-            <!-- removed CTA button -->
+            <h2 class="cs-title">Let's build something good.</h2>
+            <a href="/contact/" class="cs-button-solid"><span>Start Here</span></a>
         </div>
     </div>
-    <!--SVG Waves Background removed from orig CS code -->
-    
-</section>  
+</section>
 
 
 {% endblock %}

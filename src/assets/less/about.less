@@ -53,6 +53,8 @@
             img {
                 width: 100%;
                 height: auto;
+                border-radius: (10/16rem);
+                corner-shape: bevel; /* new css. chrome only. needs border-radius. */
                 display: block;
             }
         }
@@ -116,6 +118,10 @@
             margin: 0;
             color: var(--bodyTextColor);
             text-align: justify;
+        }
+
+        .cs-item-text-highlight {
+            color: #fff;
         }
     }
 }
@@ -271,26 +277,20 @@
     }
 }
 
-/*-- -------------------------- -->
-<---     CTA - CS 697            -->
-<--- -------------------------- -*/
+
+/*-- ---------------------------------------------- -->
+<---   CTA - CS 697 (Same as V modified homepg sec 8.)   -->
+<--- ---------------------------------------------- -*/
+
+/* W3v2 MODIFIED */
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #cta-697 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: var(--primaryBorder);
         position: relative;
         z-index: 1;
-
-        /* Adding css (less) bg texture instead of orig CS svg bg img */
-        background-image: repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 30px,
-            rgba(255, 255, 255, 0.04) 30px,
-            rgba(255, 255, 255, 0.04) 40px
-            );
 
         .cs-container {
             width: 100%;
@@ -312,53 +312,19 @@
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
             /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+            gap: clamp(1.5rem, 4vw, 2.2rem);
         }
 
         .cs-title {
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
+            font-size: clamp(1.6rem, 3.3vw, 2.875rem); // reduced from --headerFont.
         }
 
+        /* button sizing from hero context */
         .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
             line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
+            height: clamp(2.875rem, 5.5vw, 3.5rem);
             margin: 0;
-            // color: var(--bodyTextColorWhite);
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #fff;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                color: #000;
-                &:before {
-                    width: 100%;
-                }
-            }
         }
 
     }

@@ -1,225 +1,312 @@
-/*-- -------------------------- -->
-<---  Pricing - Services CS 264 -->
-<--- -------------------------- -*/
+
+/*-- -------------------------------------------- -->
+<---      Pricing cards - sec 5 from homepg       -->
+<--- -------------------------------------------- -*/
+/* W3v2 MODIFIED */
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #services-264 {
-        padding: var(--sectionPadding);
-        padding-top: 9rem;
+  #pricing {
+    padding: var(--sectionPadding);
+    padding-top: clamp(6rem, 14vw, 9rem);
+    background-color: var(--dark);
+    position: relative;
+    margin-bottom: 6px; // for tick divider.
 
-        .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+        &::after { // tick divider.
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 0.5px;
+            background: var(--primaryBorder);
         }
 
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: justify;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: clamp(1rem, 4vw, 2rem);
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
         }
 
-        .cs-text {
-            margin-bottom: (16/16rem);
-            &:last-of-type {
-                margin-bottom: (32/16rem);
-            }
-        }
-
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            transition: color 0.3s;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                color: #fff;
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-
-        .cs-card-group {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: (8/16rem);
-        }
-
-        .cs-item {
-            list-style: none;
-            position: relative;
-            display: block;
-            width: 100%;
-            height: auto; /* was 60vw */
-            background-color: #eff7fd; /* V added */
-            border: 1px solid #999999; /* V added */
-            border-radius: (8/16rem); /* V added */
-            /* max-height: (250/16rem);  */
-            font-size: clamp(1rem, 1.7vw, 1.5rem);
-            /* color: #fff; << not used anywhere, or overridden */
-
-            /* 16px - 20px top & bottom */
-            /* 20px - 24px left & right */
-            padding: clamp(1rem, 2vw, 1.25rem) clamp(1.25rem, 2vw, 1.5rem);
-            /* padding: clamp(1rem, 2.5vw, 1.5rem); << Add this if sth breaks with above padding */
-
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            transition: 
-                box-shadow 0.3s,
-                transform 0.3s;
-            
-            &:last-of-type {
-                background-color: #e5e5e5;
-            }
-        }
-
-        .cs-h3 {
-            /* 16px - 25px */
-            font-size: clamp(1rem, 2vw, 1.5625rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            margin: 0;
-            color: #000;
-            display: block;
-        }
-
-        .cs-price {
-            font-size: clamp(1.25rem, 3vw, 1.75rem);
-            font-weight: 700;
-            color: #6b717b;
-            //text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            margin: (8/16rem) 0 (16/16rem) 0;
-        }
-
-        .cs-features {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            
-            li {
-                color: #000;
-                padding: auto 0;
-                /* font color not needed, seems to inherit */
-                font-size: clamp(0.9rem, 1.5vw, 1rem);
-                line-height: 1.8;
-                
-                &:before {
-                    content: "";
-                    margin-right: (4/16rem);
-                }
-            }
-        }
-      
+    .cs-container {
+      width: 100%;
+      max-width: (1440/16rem);
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+      display: flex;
+      flex-direction: column;
+      gap: (40/16rem);
     }
+
+
+    .pricing-headline {
+        font-family: var(--headerFont);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        color: var(--headerColor);
+        line-height: 1.1;
+        margin-top: (20/16rem);
+    }
+
+    .pricing-intro {
+        font-size: (15/16rem);
+        color: var(--bodyTextColor);
+        line-height: 1.7em;
+        margin: 0;
+        max-width: (760/16rem);
+    }
+
+    .pricing-grid {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: (16/16rem);
+    }
+
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      gap: (20/16rem);
+      padding: clamp(1.5rem, 4vw, 2rem);
+      border: 0.5px solid var(--primaryDim);
+      position: relative;
+
+      // Featured card gets the accent left border
+      &--featured {
+        border-left: 1.5px solid var(--primary);
+      }
+    }
+
+    .pricing-label {
+      font-family: var(--monoFont);
+      font-size: (14/16rem);
+      letter-spacing: 0.2em;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .pricing-price {
+      display: flex;
+      flex-direction: column;
+      gap: (10/16rem);
+    }
+
+    .pricing-amount {
+      font-family: var(--headerFont);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--headerColor);
+      line-height: 1;
+    }
+
+    .pricing-sub {
+      font-family: var(--monoFont);
+      font-size: (14/16rem);
+      letter-spacing: 0.15em;
+      color: var(--bodyTextColorWhite);
+      opacity: 0.45;
+      text-transform: lowercase;
+    }
+
+    .pricing-desc {
+      font-size: (15/16rem);
+      color: var(--bodyTextColor);
+      line-height: 1.7em;
+      margin: 0;
+      padding-bottom: (20/16rem);
+      border-bottom: 0.5px solid var(--primaryBorder);
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: (12/16rem);
+
+      li {
+        font-size: (14/16rem);
+        color: var(--bodyTextColor);
+        padding-left: (20/16rem);
+        position: relative;
+        line-height: 1.5em;
+
+        &::before {
+          content: "—";
+          position: absolute;
+          left: 0;
+          color: var(--primary);
+        }
+      }
+    }
+
+    // Button sits at bottom, full width on mobile
+    .cs-button-solid,
+    .cs-button-ghost {
+      width: 100%;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .pricing-nudge {
+      font-size: (15/16rem);
+      color: var(--bodyTextColor);
+      opacity: 0.7;
+      margin: 0;
+      text-align: center;
+      line-height: 1.6em;
+      margin-bottom: -1rem;
+    }
+
+    .pricing-nudge-link {
+      color: var(--primary);
+      text-decoration: none;
+      opacity: 1;
+      font-family: var(--monoFont);
+      font-size: (15/16rem);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      margin-left: (2/16rem);
+      transition: color 0.3s, letter-spacing 0.3s;
+
+        &:hover {
+            color: var(--headerColor);
+            letter-spacing: 0.04em;
+            text-decoration: none;
+        }
+    }
+  }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #services-264 {
-        padding-top: 13rem;
+  #pricing {
+    .pricing-grid {
+      flex-direction: row;
+      align-items: stretch;
+      gap: (16/16rem);
+    }
+
+    .pricing-card {
+      flex: 1;
+    }
+
+    .cs-button-solid,
+    .cs-button-ghost {
+      width: 100%;
+    }
+
+    .pricing-nudge {
+      text-align: left;
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #pricing {
+    .pricing-amount {
+      font-size: (50/16rem);
+    }
+  }
+}
+
+
+/*-- -------------------------------------------- -->
+<---          Larger Projects                     -->
+<--- -------------------------------------------- -*/
+/* W3v2 */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #larger-projects {
+        padding: var(--sectionPadding);
+        background-color: var(--dark);
+        position: relative;
+        //margin-bottom: 6px; // Removed for tick divider to overlap with cta top border.
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 0.5px;
+            background: var(--primaryBorder);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: clamp(1rem, 4vw, 2rem);
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+        }
 
         .cs-container {
-            flex-direction: row;
-            //padding-right: var(--sectionPadding);
-        }
-
-        .cs-title {
-            white-space: nowrap; /* V added to keep cs-title sentences to one line each */
-        }
-
-        .cs-content {    /* V added so that cs-card-group can get 65% width */
-            width: 28%;    
-        }
-
-        .cs-card-group {
-            width: 65%;  /* V: max allowed before right padding disappears */
-            max-width: (867/16rem);
-            flex-direction: row;
-            justify-content: space-between;
-            /* 16px - 20px */
-            gap: clamp(1rem, 1.5vw, 1.25rem);
-            flex: none;
-        }
-
-        .cs-item {
             width: 100%;
-            height: auto; /* was 50vw*/
-            max-width: (275/16rem);
-            max-height: (600/16rem);
-            min-height: (400/16rem);
+            max-width: (1440/16rem);
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+            display: flex;
+            flex-direction: column;
+            gap: (28/16rem);
+        }
 
-            &:hover {
-                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-                transform: translateY(-0.5rem);
-            }
+        .lp-text {
+            font-size: (15/16rem);
+            color: var(--bodyTextColor);
+            line-height: 1.7em;
+            margin: 0;
+            max-width: (700/16rem);
+            padding-top: 1rem;
+        }
+
+        .lp-list {
+          list-style: none;
+
+            li {
+                font-size: (15/16rem);
+                color: var(--bodyTextColor);
+                line-height: 1.7em;
+
+                &::before {
+                    content: "— ";
+                    color: var(--primary);
+                }
+          }
         }
     }
 }
 
-/*-- -------------------------- -->
-<---     CTA - CS 697           -->
-<--- -------------------------- -*/
+
+
+/*-- ---------------------------------------------- -->
+<---   CTA - CS 697 (Same as V modified homepg sec 8.)   -->
+<--- ---------------------------------------------- -*/
+
+/* W3v2 MODIFIED */
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #cta-697 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: var(--primaryBorder);
         position: relative;
         z-index: 1;
-        /* Adding css (less) texture instead of orig CS svg bg img */
-        background-image: repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 30px,
-            rgba(255, 255, 255, 0.04) 30px,
-            rgba(255, 255, 255, 0.04) 40px
-            );
 
         .cs-container {
             width: 100%;
@@ -241,53 +328,19 @@
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
             /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+            gap: clamp(1.5rem, 4vw, 2.2rem);
         }
 
         .cs-title {
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
+            font-size: clamp(1.6rem, 3.3vw, 2.875rem); // reduced from --headerFont.
         }
 
+        /* button sizing from hero context */
         .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
             line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
+            height: clamp(2.875rem, 5.5vw, 3.5rem);
             margin: 0;
-            // color: var(--bodyTextColorWhite);
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #fff;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                color: #000;
-                &:before {
-                    width: 100%;
-                }
-            }
         }
 
     }
@@ -303,3 +356,4 @@
         }
     }
 }
+

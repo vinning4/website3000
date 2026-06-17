@@ -1,0 +1,568 @@
+
+/*-- -------------------------- -->
+<---       WIW 1 - Hero         -->
+<--- -------------------------- -*/
+
+/* W3v2 MODIFIED */
+
+@media only screen and (min-width: 0rem) {
+    #wiw-hero {
+        padding: var(--sectionPadding);
+        padding-top: clamp(6rem, 14vw, 9rem);
+        background-color: var(--dark);
+        margin-bottom: 6px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 0.5px;
+            background: var(--primaryBorder);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: clamp(1rem, 4vw, 2rem);
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1440/16rem);
+            box-sizing: border-box;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: (8/16rem);
+        }
+
+        .cs-title {
+            //max-width: 18ch;
+            margin: clamp(0.75rem, 2vw, 1rem) 0 0 0;
+        }
+
+        .cs-text {
+            max-width: 55ch;
+            margin-top: clamp(1rem, 2.5vw, 1.5rem);
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---       WIW 2 - The Model    -->
+<--- -------------------------- -*/
+
+/* W3v2 MODIFIED */
+
+@media only screen and (min-width: 0rem) {
+    #wiw-model {
+        padding: var(--sectionPadding);
+        background-color: var(--accent);
+        margin-bottom: 6px;
+        margin-top: -3px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 0.5px;
+            background: var(--primaryBorder);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: clamp(1rem, 4vw, 2rem);
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1440/16rem);
+            box-sizing: border-box;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(2.5rem, 6vw, 4rem);
+        }
+
+        .cs-block {
+            display: flex;
+            flex-direction: column;
+            gap: (8/16rem);
+        }
+
+        .cs-title {
+            max-width: 36ch;
+            margin: clamp(0.75rem, 2vw, 1rem) 0 0 0;
+        }
+
+        .cs-text {
+            max-width: 62ch;
+            margin-top: clamp(0.75rem, 2vw, 1rem);
+
+            & + .cs-text {
+                margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
+            }
+        }
+
+        .cs-divider {
+            width: 100%;
+            height: 0.5px;
+            background: var(--primaryBorder);
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -2px;
+                left: 0;
+                width: 5px;
+                height: 5px;
+                background: var(--primary);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    #wiw-model {
+        .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: clamp(3rem, 6vw, 6rem);
+        }
+
+        .cs-block {
+            flex: 1;
+        }
+
+        .cs-divider {
+            width: 0.5px;
+            height: auto;
+            align-self: stretch;
+
+            &::before {
+                top: 0;
+                left: -2px;
+            }
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---     WIW 3 - Speed & Proof  -->
+<--- -------------------------- -*/
+
+/* W3v2 MODIFIED */
+
+@media only screen and (min-width: 0rem) {
+    #wiw-speed {
+        padding: var(--sectionPadding);
+        background-color: var(--dark);
+        margin-bottom: 6px;
+        margin-top: -3px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 0.5px;
+            background: var(--primaryBorder);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: clamp(1rem, 4vw, 2rem);
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1440/16rem);
+            box-sizing: border-box;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(2rem, 5vw, 3rem);
+        }
+
+        .cs-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: (8/16rem);
+        }
+
+        .cs-title {
+            max-width: 28ch;
+            margin: clamp(0.75rem, 2vw, 1rem) 0 0 0;
+        }
+
+        .cs-text {
+            //max-width: ();
+            margin-top: clamp(0.75rem, 2vw, 1rem);
+        }
+
+        // proof block
+        .cs-proof {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        // score card
+        .cs-score-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem;
+            padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+            position: relative;
+        }
+
+        .cs-score-topper {
+            font-family: var(--monoFont);
+            font-size: 0.75rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .cs-scores {
+            display: flex;
+            align-items: center;
+            gap: clamp(1.5rem, 4vw, 3rem);
+            margin: clamp(0.75rem, 2vw, 1.25rem) 0;
+        }
+
+        .cs-score-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .cs-score-number {
+            font-family: var(--monoFont);
+            font-size: clamp(3rem, 10vw, 5rem);
+            color: var(--primary);
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .cs-score-label {
+            font-family: var(--monoFont);
+            font-size: 0.75rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .cs-score-divider {
+            width: 1px;
+            height: clamp(2rem, 6vw, 3.5rem);
+            background: var(--primaryBorder);
+            align-self: center;
+        }
+
+        .cs-score-sub {
+            font-family: var(--bodyFont);
+            font-size: 0.875rem;
+            color: var(--bodyTextColor);
+            margin: 0;
+        }
+
+        .cs-score-source {
+            font-family: var(--monoFont);
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            margin-top: 0.25rem;
+        }
+
+        // stat grid
+        .cs-stat-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background-color: var(--primaryBorder);
+            border: 1px solid var(--primaryBorder);
+        }
+
+        .cs-stat-item {
+            background-color: var(--dark);
+            padding: clamp(1rem, 3vw, 1.5rem);
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 2px;
+                height: 100%;
+                background: var(--primaryDim);
+                transition: background 0.2s ease;
+            }
+
+            &:hover::before {
+                background: var(--primary);
+            }
+        }
+
+        .cs-stat-number {
+            font-family: var(--monoFont);
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .cs-stat-label {
+            font-family: var(--bodyFont);
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            color: var(--bodyTextColorWhite);
+            line-height: 1.5;
+        }
+
+        .cs-stat-source {
+            font-family: var(--monoFont);
+            font-size: 0.65rem;
+            color: var(--muted);
+            margin-top: 0.25rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    #wiw-speed {
+        .cs-proof {
+            flex-direction: row;
+            align-items: stretch;
+            gap: clamp(1.5rem, 3vw, 2.5rem);
+        }
+
+        .cs-score-card {
+            flex: 1;
+            justify-content: center;
+        }
+
+        .cs-stat-list {
+            flex: 1;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---   WIW 4 - Architecture     -->
+<--- -------------------------- -*/
+
+/* W3v2 MODIFIED */
+
+@media only screen and (min-width: 0rem) {
+    #wiw-architecture {
+        padding: var(--sectionPadding);
+        background-color: var(--accent);
+        margin-bottom: 6px;
+        margin-top: -3px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 0.5px;
+            background: var(--primaryBorder);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: clamp(1rem, 4vw, 2rem);
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1440/16rem);
+            box-sizing: border-box;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(2rem, 5vw, 3rem);
+        }
+
+        .cs-header {
+            display: flex;
+            flex-direction: column;
+            gap: (8/16rem);
+        }
+
+        .cs-title {
+            max-width: 30ch;
+            margin: clamp(0.75rem, 2vw, 1rem) 0 0 0;
+        }
+
+        .cs-text {
+            margin-top: clamp(0.75rem, 2vw, 1rem);
+
+            &--second {
+                margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
+            }
+        }
+
+        // table
+        .cs-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid var(--primaryBorder);
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                width: 5px;
+                height: 5px;
+                background: var(--primary);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                right: -3px;
+                width: 5px;
+                height: 5px;
+                background: var(--primary);
+            }
+        }
+
+        .cs-table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            font-family: var(--bodyFont);
+        }
+
+        // header row
+        .cs-th {
+            padding: clamp(0.75rem, 2vw, 1rem) clamp(0.75rem, 2vw, 1.25rem);
+            text-align: left;
+            font-family: var(--monoFont);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--primaryBorder);
+
+            &--feature {
+                width: 22%;
+                color: var(--muted);
+            }
+
+            &--w3 {
+                width: 39%;
+                color: var(--primary);
+                border-left: 1px solid var(--primaryBorder);
+            }
+
+            &--wp {
+                width: 39%;
+                color: var(--muted);
+                border-left: 1px solid var(--primaryBorder);
+            }
+        }
+
+        .cs-th-sub {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--muted);
+            margin-top: 0.2rem;
+            letter-spacing: 0.08em;
+        }
+
+        // body rows
+        .cs-tr {
+            border-bottom: 1px solid var(--primaryBorder);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background-color: var(--primarySubtle);
+            }
+        }
+
+        .cs-td {
+            padding: clamp(0.75rem, 2vw, 1rem) clamp(0.75rem, 2vw, 1.25rem);
+            font-size: clamp(0.8rem, 1.8vw, 0.9375rem);
+            line-height: 1.5;
+            vertical-align: top;
+
+            &--feature {
+                color: var(--bodyTextColorWhite);
+                font-size: clamp(0.75rem, 1.6vw, 0.875rem);
+            }
+
+            &--w3 {
+                color: var(--primary);
+                font-family: var(--monoFont);
+                font-size: clamp(0.75rem, 1.6vw, 0.875rem);
+                border-left: 1px solid var(--primaryBorder);
+            }
+
+            &--wp {
+                color: var(--muted);
+                font-family: var(--monoFont);
+                font-size: clamp(0.75rem, 1.6vw, 0.875rem);
+                border-left: 1px solid var(--primaryBorder);
+            }
+        }
+    }
+}

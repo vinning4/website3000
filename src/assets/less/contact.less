@@ -26,7 +26,7 @@
                 display: block;
                 height: 100%;
                 width: 100%;
-                background: #1a1a1a;
+                background: var(--medium);
                 opacity: 0.8;
                 top: 0;
                 left: 0;
@@ -204,7 +204,7 @@
     #contact-569 {
         padding: var(--sectionPadding);
         //padding-top: 10rem;
-        background-color: #fafbfc;
+        background-color: var(--accent);
         position: relative;
         z-index: 1;
 
@@ -254,7 +254,7 @@
             /* 14px - 16px */
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             width: 100%;
-            color: var(--headerColor);
+            color: var(--bodyTextColorWhite);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -268,7 +268,7 @@
             height: (40/16rem);
             padding: 0;
             padding-left: (24/16rem);
-            color: var(--headerColor);
+            color: var(--bodyTextColor);
             background-color: #fff;
             border: 1px solid #e0e0e0;
             /* prevents padding from adding to height and width */
@@ -281,7 +281,7 @@
                 outline: 1px solid var(--secondary);
             }
             &::placeholder {
-                color: #7d799c;
+                color: var(--accent);
                 opacity: 0.6;
                 font-size: (14/16rem);
             }
@@ -336,7 +336,7 @@
                 position: absolute;
                 height: 100%;
                 width: 0%;
-                background: #000;
+                background: var(--muted);
                 opacity: 1;
                 top: 0;
                 left: 0;
@@ -540,11 +540,13 @@
     
         .cs-title {
             max-width: 20ch;
+            color: var(--bodyTextColor);
         }
 
         .cs-text {
             font-size: (18/16rem);
             max-width: (640/16rem);
+            color: var(--muted);
             position: relative;
             z-index: 1;
             text-align: left;
@@ -656,7 +658,7 @@
                 width: 100%;
                 height: 100%;
                 background: #000;
-                opacity: 0.55;
+                opacity: 0.7;
                 position: absolute;
                 display: block;
                 top: 0;
@@ -670,7 +672,7 @@
                 width: 100%;
                 height: 100%;
                 //background: var(--primaryLight);
-                background: #645a37;
+                background: #375f64;
                 opacity: 0.3;
                 position: absolute;
                 display: block;
@@ -780,27 +782,22 @@
 }
 
 
+/* old below, V modified */
+
 
 /*-- -------------------------- -->
-<---  Banner time to level up - CTA CS 697   -->
+<---     CTA - CS 697            -->
 <--- -------------------------- -*/
+
+/* W3v2 MODIFIED */
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #cta-697 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: var(--primaryBorder);
         position: relative;
         z-index: 1;
-
-        /* Adding css (less) bg texture instead of orig CS svg bg img */
-        background-image: repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 30px,
-            rgba(255, 255, 255, 0.04) 30px,
-            rgba(255, 255, 255, 0.04) 40px
-            );
 
         .cs-container {
             width: 100%;
@@ -822,15 +819,20 @@
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
             /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+            gap: clamp(1.5rem, 4vw, 2.2rem);
         }
 
         .cs-title {
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
+            font-size: clamp(1.6rem, 3.3vw, 2.875rem); // reduced from --headerFont.
         }
 
-        /* removed cs-button-solid styling */
-        /* removed cs-background for svg waves bg of CTA banner */
+        /* button sizing from hero context */
+        .cs-button-solid {
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            height: clamp(2.875rem, 5.5vw, 3.5rem);
+            margin: 0;
+        }
 
     }
 }
@@ -845,3 +847,4 @@
         }
     }
 }
+                                
