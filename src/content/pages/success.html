@@ -1,6 +1,6 @@
 ---
-title: "Thanks for reaching out! | Website3000"
-description: "Your message has been received. I'll get back to you within 24 hours."
+title: "Received | Website3000"
+description: "Your message has been received. A response will follow within one business day."
 permalink: "/success/"
 ---
 
@@ -8,34 +8,29 @@ permalink: "/success/"
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/success.css">
-    
 {% endblock %}
 
 {% block body %}
 
-<!--
-<div class="success-page">
-    <h1>Success!</h1>
-    <p>Form submitted. You will hear back soon.</p>
-    <a href="/" class="cs-button-solid">Back to Homepage</a>
-</div>
--->
-
-
-<div class="success-page">
-    <h1>Message received!</h1>
-    <p class="cs-main-text">
-        Thanks for reaching out! I'll get back to you within 24 hours.
-    </p>
-    <p class="cs-sub-text">
-        In the meantime, check out some examples of my work or learn more about the Website<span style="color: #e84d1e">3000</span> advantage.
-    </p>
-    
-    <div class="cs-button-group">
-        <a href="/#gallery-42" class="cs-button-solid">Portfolio</a>
-        <a href="/advantage/" class="cs-button-outline">Why It Works</a>
+<section class="success">
+    <div class="success__content">
+        <p class="success__log">// LOG <span id="log-timestamp">--.--.---- --:--</span></p>
+        <h1 class="success__heading">Received.</h1>
+        <p class="success__body">A response will follow within one business day.</p>
+        <div class="success__cta">
+            <a href="/#portfolio" class="cs-button-solid">Portfolio</a>
+        </div>
     </div>
-</div>
+</section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var now = new Date();
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    var timestamp = pad(now.getDate()) + '.' + pad(now.getMonth() + 1) + '.' + now.getFullYear() + ' ' + pad(now.getHours()) + ':' + pad(now.getMinutes());
+    var el = document.getElementById('log-timestamp');
+    if (el) { el.textContent = timestamp; }
+});
+</script>
 
 {% endblock %}
