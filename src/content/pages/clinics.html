@@ -1,0 +1,249 @@
+---
+title: "Web Design for Skin & Cosmetic Clinics | Website3000"
+description: "Hand-coded websites for skin and cosmetic clinics in Melbourne. Built to convert visitors into bookings. From $150/month, fully managed. No WordPress, no templates."
+permalink: "/clinics/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/clinics.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                1 - Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero">
+    <div class="cs-container">
+
+        <!-- LEFT: headline, text, buttons, tags -->
+        <div class="hero-left">
+            <div class="cs-content">
+                <span class="cs-topper">// Melbourne Web Design · For Clinics</span>
+                <h1 class="cs-title">
+                    Websites that win<br>
+                    bookings. And load<br>
+                    in <em>one second.</em>
+                </h1>
+            </div>
+            <p class="cs-text">
+                Hand-coded websites for skin and cosmetic clinics. Lightweight, bulletproof, and fast.
+                <br><br>
+                <strong>No off-the-shelf templates.</strong> A sharp, precision-engineered site that helps your business get found, and turns visitors into bookings. Explained in plain English. Fully managed by one person. Simple pricing from $150/month.
+            </p>
+            <div class="hero-btns">
+                <a href="/contact/" class="cs-button-solid"><span>Start My Site</span><span class="cs-cursor">_</span></a>
+                <a href="/#portfolio" class="cs-button-ghost"><span>See the Work</span></a>
+            </div>
+
+            <!-- Tag pills -->
+            <ul class="hero-tags">
+                <li class="hero-tag">Hand-Coded</li>
+                <li class="hero-tag">No WordPress</li>
+                <li class="hero-tag">Fast Loading</li>
+                <li class="hero-tag">Made in AU</li>
+            </ul>
+        </div>
+
+        <!-- RIGHT: PSI graphic with darker bg and reticle corners -->
+        <div class="hero-right">
+            <div class="psi-ret psi-ret-tl"></div>
+            <div class="psi-ret psi-ret-br"></div>
+            <div class="hero-psi">
+                <p class="psi-label">Google PageSpeed</p>
+                <div class="psi-ring-wrap">
+                    <svg class="psi-ring" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="60" cy="60" r="52" fill="none" stroke="#00c8a815" stroke-width="5"/>
+                        <circle cx="60" cy="60" r="52" fill="none" stroke="#00c8a8" stroke-width="5"
+                            stroke-dasharray="326.7" stroke-dashoffset="3.3"
+                            stroke-linecap="butt" transform="rotate(-90 60 60)"/>
+                    </svg>
+                    <span class="psi-score">100</span>
+                </div>
+                <span class="psi-badge">Performance · Mobile</span>
+                <div class="psi-metrics">
+                    <div class="psi-met">
+                        <span class="psi-met-val">0.8s</span>
+                        <span class="psi-met-lbl">LCP</span>
+                    </div>
+                    <div class="psi-sep"></div>
+                    <div class="psi-met">
+                        <span class="psi-met-val">0ms</span>
+                        <span class="psi-met-lbl">CLS</span>
+                    </div>
+                    <div class="psi-sep"></div>
+                    <div class="psi-met">
+                        <span class="psi-met-val">100</span>
+                        <span class="psi-met-lbl">SEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Stats bar — full width below the two columns -->
+    <div class="hero-stats">
+        <div class="hero-stat">
+            <span class="hero-stat-num">100</span>
+            <span class="hero-stat-desc">PageSpeed Score</span>
+        </div>
+        <div class="hero-stat">
+            <span class="hero-stat-num">$150</span>
+            <span class="hero-stat-desc">Per month · All included</span>
+        </div>
+        <div class="hero-stat">
+            <span class="hero-stat-num">1 sec</span>
+            <span class="hero-stat-desc">Load time · Guaranteed</span>
+        </div>
+        <div class="hero-stat">
+            <span class="hero-stat-num">0</span>
+            <span class="hero-stat-desc">WordPress installs · Ever</span>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ============================================ -->
+<!--             2 - Portfolio                      -->
+<!-- ============================================ -->
+
+<section id="portfolio">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">// Recent Builds</span>
+            <h2 class="cs-title">Websites built for results</h2>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <!-- Card 1: Oakwell GP -->
+            <div class="portfolio-card">
+                <a href="https://oakwellgp.netlify.app/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="portfolio-img-wrap">
+                    <span class="portfolio-live-label">Preview</span>
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="/assets/images/portfolio/oakwell-d.webp">
+                        <img src="/assets/images/portfolio/oakwell-m.webp"
+                             loading="lazy"
+                             decoding="async"
+                             alt="Oakwell GP website design Oakleigh Melbourne"
+                             width="400" height="600">
+                    </picture>
+                </a>
+                <a href="https://oakwellgp.netlify.app/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="portfolio-card-bar">
+                    <div class="portfolio-card-info">
+                        <span class="portfolio-card-name">Oakwell GP</span>
+                        <span class="portfolio-card-meta">Clinic &#9642; Oakwell</span>
+                    </div>
+                    <span class="portfolio-card-visit">Visit &rarr;</span>
+                    <span class="portfolio-card-score">100/100</span>
+                </a>
+            </div>
+
+            <!-- Card 2: Lost Sheep Café -->
+            <div class="portfolio-card">
+                <a href="https://lost-sheep.com.au/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="portfolio-img-wrap">
+                    <span class="portfolio-live-label">Preview</span>
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="/assets/images/portfolio/lsc-d.webp">
+                        <img src="/assets/images/portfolio/lsc-m.webp"
+                             loading="lazy"
+                             decoding="async"
+                             alt="Lost Sheep Café website design Ivanhoe"
+                             width="400" height="600">
+                    </picture>
+                </a>
+                <a href="https://lost-sheep.com.au/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="portfolio-card-bar">
+                    <div class="portfolio-card-info">
+                        <span class="portfolio-card-name">Lost Sheep Café</span>
+                        <span class="portfolio-card-meta">Cafe &#9642; Ivanhoe</span>
+                    </div>
+                    <span class="portfolio-card-visit">Visit &rarr;</span>
+                    <span class="portfolio-card-score">99/100</span>
+                </a>
+            </div>
+
+            <!-- Card 3: Gemelli Coffee + Panini -->
+            <div class="portfolio-card">
+                <a href="https://gemellipanini.com.au/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="portfolio-img-wrap">
+                    <span class="portfolio-live-label">Preview</span>
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="/assets/images/portfolio/gemelli-d.webp">
+                        <img src="/assets/images/portfolio/gemelli-m.webp"
+                             loading="lazy"
+                             decoding="async"
+                             alt="Gemelli Coffee and Panini website design Ivanhoe"
+                             width="400" height="600">
+                    </picture>
+                </a>
+                <a href="https://gemellipanini.com.au/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="portfolio-card-bar">
+                    <div class="portfolio-card-info">
+                        <span class="portfolio-card-name">Gemelli Coffee + Panini</span>
+                        <span class="portfolio-card-meta">Cafe &#9642; Ivanhoe</span>
+                    </div>
+                    <span class="portfolio-card-visit">Visit &rarr;</span>
+                    <span class="portfolio-card-score">100/100</span>
+                </a>
+            </div>
+
+            <!-- Card 4: Fitness3K -->
+            <div class="portfolio-card">
+                <a href="https://fitness3k.netlify.app/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="portfolio-img-wrap">
+                    <span class="portfolio-live-label">Preview</span>
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="/assets/images/portfolio/fitness3k-d.webp">
+                        <img src="/assets/images/portfolio/fitness3k-m.webp"
+                             loading="lazy"
+                             decoding="async"
+                             alt="Fitness3K gym website design Melbourne"
+                             width="400" height="600">
+                    </picture>
+                </a>
+                <a href="https://fitness3k.netlify.app/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="portfolio-card-bar">
+                    <div class="portfolio-card-info">
+                        <span class="portfolio-card-name">Fitness3K</span>
+                        <span class="portfolio-card-meta">Gym &#9642; Melbourne</span>
+                    </div>
+                    <span class="portfolio-card-visit">Visit &rarr;</span>
+                    <span class="portfolio-card-score">100/100</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}
