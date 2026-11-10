@@ -147,12 +147,19 @@
     #about-hero {
         .about-container {
             flex-direction: row;
-            align-items: flex-start;
+            align-items: stretch; /* was flex-start: makes the card as tall as the text */
             gap: 3rem;
         }
 
         .terminal {
             flex: 0 0 45%;
+            display: flex;          /* lets the list grow to fill the card */
+            flex-direction: column;
+        }
+
+        .terminal-list {
+            flex: 1;                           /* fills the space under the title bar */
+            justify-content: space-between;    /* spreads the 7 rows evenly */
         }
 
         .about-content {
